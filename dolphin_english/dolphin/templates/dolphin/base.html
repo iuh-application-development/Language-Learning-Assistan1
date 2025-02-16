@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- {% static 'dolphin/css/gramma.css'%} -->
+    <link rel="stylesheet" href="{% static 'dolphin/css/base.css'%}">
+    <link rel="stylesheet" href="{% static 'dolphin/css/gramma.css'%}">
+    <link rel="stylesheet" href="{% static 'dolphin/css/listen.css'%}">
+</head>
+<body>
+    <div id="header">
+        <div id="container">
+            <!-- Logo bên trái -->
+            <div class="nav-logo-web">
+                <a href="{% url 'home' %}">
+                    <img src={%static 'dolphin/img/Logo_caheo.png'%} alt="logo"> 
+                    <span class="brand-name">Dolphin</span>
+                </a>
+            </div>
+            
+            <!-- Menu bên phải -->
+            <ul class="nav-menu">
+                <li><a href="{% url 'listen' %}" class="listen">Listen</a></li>
+                <li><a href="{% url 'gramma' %}" class="gramma">Grammar</a></li>
+                <li><a href="#" class="login">Login</a></li>
+                <li><a href="#" class="register">Register</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        {% block banner_slide %}{% endblock banner_slide %}
+        {% block listen %}{% endblock listen %}
+    </div>
+    <div id="footer">
+        <div id="footer-container">
+            <!-- <div class="footer-column app-links">
+                <a href="#"><img src="appstore.png" alt="Download on the App Store"></a>
+                <a href="#"><img src="googleplay.png" alt="Get it on Google Play"></a>
+            </div> -->
+            <!-- 🔹 Cột 1: Danh mục -->
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#" class="introduction">Giới thiệu</a></li>
+                    <li><a href="#" class="method">Phương pháp</a></li>
+                    <li><a href="#" class="research">Nghiên cứu</a></li>
+                    <li><a href="#" class="social">Mạng xã hội</a></li>
+                    <li><a href="#" class="tech">Công nghệ sử dụng</a></li>
+                </ul>
+            </div>
+    
+            <!-- 🔹 Cột 2: Hỗ trợ & Liên hệ -->
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#" class="facebook">Facebook</a></li>
+                    <li><a href="#" class="instagram">Instagram</a></li>
+                    <li><a href="#" class="thread">Thread</a></li>
+                </ul>
+            </div>
+    
+            <!-- 🔹 Cột 3: Chính sách & Mạng xã hội -->
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#" class="Forum-Rules">Nội quy diễn đàn</a></li>
+                    <li><a href="#" class="clause">Điều khoản</a></li>
+                    <li><a href="#" class="privacy-tue">Quyền riêng tư</a></li>
+                </ul>
+                
+            </div>
+        </div>
+    
+        <!-- 🔹 Dòng chữ bản quyền -->
+        <div class="footer-bottom">
+            <p>©dolphin.com · since 2025</p>
+        </div>
+    </div>
+</body>
+</html>

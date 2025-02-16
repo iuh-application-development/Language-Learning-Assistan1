@@ -1,0 +1,226 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* 🔹 Header cố định trên cùng */
+#header {
+  background-color: #6db8f2;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Chứa nội dung header */
+#container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Logo */
+.nav-logo-web img {
+  width: 50px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Menu điều hướng */
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: normal;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: red;
+}
+
+/*  Phần Content chính */
+/*  Phần Content chính */
+
+#content {
+  max-width: 1100px; /* Giới hạn chiều rộng */
+  margin: 80px auto; /* Căn giữa nội dung theo chiều ngang */
+  padding: 30px 20px;
+  text-align: center; /* Căn giữa văn bản */
+}
+#content h1 {
+  display:flex ;
+
+}
+/*  Container chứa các chủ đề */
+.topics-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Hiển thị 3 cột trên desktop */
+  gap: 20px;
+  justify-content: center; /* Căn giữa các cột */
+  padding-bottom: 80px; /* Để tránh bị footer che mất nội dung */
+}
+
+/*  Thẻ chứa từng chủ đề */
+.topic-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: 0.3s;
+  text-align: left;
+}
+
+.topic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/*  Hình ảnh của mỗi topic */
+.topic-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/*  Thông tin topic */
+.topic-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/*  Tiêu đề của topic */
+.topic-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: blue;
+  text-decoration: none;
+}
+
+.topic-title:hover {
+  text-decoration: underline;
+}
+
+/*  Dòng thông tin phụ */
+.topic-info p {
+  font-size: 14px;
+  color: gray;
+}
+
+/* 🔹 Responsive Fix: Hiển thị 2 cột trên tablet */
+@media (max-width: 992px) {
+  .topics-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 🔹 Responsive Fix: Hiển thị 1 cột trên mobile */
+@media (max-width: 768px) {
+  .topics-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 🔹 Footer cố định dưới cùng */
+#footer {
+  background-color: #6db8f2;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 2px solid black;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* Container chính của footer */
+#footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+/* Mỗi cột trong footer */
+.footer-column {
+  flex: 1;
+  text-align: left;
+  padding: 5px 20px;
+}
+
+/* Định dạng danh sách */
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Định dạng các mục danh sách */
+.footer-column li {
+  margin: 5px 0;
+  font-size: 12px;
+}
+
+/* Định dạng liên kết */
+.footer-column a {
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: red;
+}
+
+/* Dòng chữ bản quyền */
+.footer-bottom {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 12px;
+  color: white;
+  background-color: #1c1c1c;
+  padding: 15px 0;
+}
+
+/* Responsive: Khi màn hình nhỏ, xếp dọc */
+@media (max-width: 768px) {
+  #footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-column {
+    text-align: center;
+    padding: 10px;
+  }
+}
