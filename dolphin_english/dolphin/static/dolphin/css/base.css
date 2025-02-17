@@ -80,9 +80,9 @@ html, body {
   text-align: center;
   border-top: 2px solid black;
   width: 100%;
-  position: fixed;
   bottom: 0;
   left: 0;
+  margin: auto;
 }
 
 /* Container chính của footer */
@@ -145,7 +145,6 @@ html, body {
   padding-top: 10px;
   font-size: 12px;
   color: white;
-  background-color: #1c1c1c;
   padding: 15px 0;
 }
 
@@ -165,7 +164,7 @@ html, body {
   padding: 50px 0;
   text-align: center;
   border-top: 2px solid black;
-  width: 100%;
+  /* width: 100%; */
   min-height: auto;
 }
 
