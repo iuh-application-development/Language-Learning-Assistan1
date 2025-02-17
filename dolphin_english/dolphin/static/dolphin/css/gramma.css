@@ -10,6 +10,7 @@ html, body {
   height: 100%;
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
+  line-height: 1.6; /* giãn cách dòng */
 }
 
 #header {
@@ -76,6 +77,8 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 30px;
 }
 
 /* Danh sách mục lục */
@@ -87,24 +90,26 @@ html, body {
 
 .table-of-contents li {
     margin: 8px 0;
+    text-align: left;
+    margin-left: 30px;
 }
 
 /* Link trong mục lục */
 .table-of-contents a {
     text-decoration: none;
-    color: #4f5459;
+    color: black;
     font-weight: bold;
-}
+  }
 
 /* Mục đang active */
 .table-of-contents .active a {
-    color:#4f5459;
+    color : black;
     text-decoration: none;
 }
 
 .table-of-contents ul a:hover {
     color:red;
-    text-decoration: underline;
+  
 }
 main {
     max-width: 900px;
@@ -124,32 +129,57 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    border-left: 5px solid #007bff;
+}
+.tense p{
+  text-align: justify;
 }
 
 .tense h2 {
     color:#003eba;
     font-size: 22px;
+    /* text-align: left; */
+}
+
+.tense h3{
+  color: black;
+  text-align: left;
+  text-transform: uppercase;
+
+}
+#frequency-adverbs h3 {
+  margin-top: 18px;
+}
+#frequency-adverbs ul {
+  padding-left: 50px; /* Tăng khoảng cách từ mép trái đến dấu chấm */
+  margin-top: 10px; 
+  text-align: justify;
+}
+
+#frequency-adverbs li {
+  margin-bottom: 8px; /* Tạo khoảng cách giữa các dòng */
+  text-align: justify;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    border: 2px solid black; 
 }
 
 table, th, td {
-    border: 1px solid #ddd;
+    text-align: center;
+    border: 2px solid #d0d9d9; 
 }
 
 th, td {
     padding: 12px;
-    text-align: left;
 }
 
 th {
     background-color:#6db8f2;
     color: b;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
