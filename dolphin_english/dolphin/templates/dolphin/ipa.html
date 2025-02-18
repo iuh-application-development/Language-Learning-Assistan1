@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .lesson-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 cột mỗi hàng */
+            gap: 15px; /* Khoảng cách giữa các ô */
+        }
+        .lesson-box {
+            display: flex;
+            align-items: center;
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .lesson-box .star {
+            font-size: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .lesson-box a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 16px;
+        }
+        .lesson-box a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .lesson-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 cột trên màn hình nhỏ */
+            }
+        }
+        @media (max-width: 480px) {
+            .lesson-grid {
+                grid-template-columns: 1fr; /* 1 cột trên màn hình rất nhỏ */
+            }
+        }
+    </style>
+</head>
+<body>    
+    <main>
+        <div class="container">
+            <h2>IPA</h2>
+            <div class="lesson-grid">
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/ɪ/ vs /iː/ (it vs eat)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/b/ - /p/ (big vs pig)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/tʃ/ - /ʃ/ (cheap vs sheep)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/s/ - /ʃ/ (so vs show)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/n/ - /ŋ/ (sin vs sing)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/d/ - /ð/ (day vs they)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/t/ - /θ/ (tank vs thank)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/l/ - /r/ (law vs raw)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/k/ - /g/ (cold vs gold)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/e/ - /ɪ/ (bet vs bit)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/ʧ/ - /t/ (chew vs two)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/t/ - /d/ (tie vs die)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/e/ - /eɪ/ (wet vs wait)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/f/ - /v/ (fan vs van)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/v/ - /w/ (vet vs wet)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/æ/ - /ʌ/ (cat vs cut)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/f/ - /h/ (fat vs hat)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/g/ - /w/ (get vs wet)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/əʊ/ - /ɔ:/ - /ɑː/ (low vs law)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/f/ - /θ/ (fin vs thin)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/h/ - /r/ (hat vs rat)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/ɒ/ - /ɑː/ - /əʊ/ (want vs won't)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/s/ - /θ/ (sing vs thing)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/r/ - /w/ (rare vs where)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/æ/ - /e/ (bad vs bed)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/ð/ - /z/ (clothe vs close)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/ʤ/ - /j/ (jam vs yam)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/ɑ:/ - /ɜ:/ (far vs fur)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/ʤ/ - /z/ (page vs pays)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/w/ - no /w/ (wait vs eight)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/æ/ - /ɑ:/ (had vs hard)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/d/ - /ʤ/ (dam vs jam)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/h/ - no /h/ (hand vs and)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/ɒ/ - /ɑː/ - /ɔ:/ (swan vs sworn)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/f/ - /p/ (fan vs pan)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/m/ - /n/ (mine vs nine)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/əʊ/ - /oʊ/ - /aʊ/ (know vs now)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/kw/ - /k/ (quick vs kick)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/s/ - /z/ (bus vs buzz)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/b/ - /v/ (ban vs van)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">/tʃ/ - /dʒ/ (cheese vs jeez)</a>
+                </div>
+                <div class="lesson-box">
+                    <span class="star">☆</span>
+                    <a href="#">
+                        /ŋk/ - /ŋ/ (bank vs bang)</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
