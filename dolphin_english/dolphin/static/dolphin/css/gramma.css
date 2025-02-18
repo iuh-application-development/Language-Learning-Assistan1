@@ -138,6 +138,7 @@ main {
     color:#003eba;
     font-size: 22px;
     /* text-align: left; */
+    text-transform: uppercase;
 }
 
 .tense h3{
@@ -155,11 +156,15 @@ main {
   text-align: justify;
 }
 
-#frequency-adverbs li {
+#frequency-adverbs ul li {
   margin-bottom: 8px; /* Tạo khoảng cách giữa các dòng */
   text-align: justify;
 }
-
+#frequency-adverbs li {
+  margin-bottom: 8px; /* Tạo khoảng cách giữa các dòng */
+  text-align: justify;
+  padding-left: 50px;
+}
 table {
     width: 100%;
     border-collapse: collapse;
@@ -168,12 +173,12 @@ table {
 }
 
 table, th, td {
-    text-align: center;
     border: 2px solid #d0d9d9; 
 }
 
 th, td {
     padding: 12px;
+    text-align: center;
 }
 
 th {

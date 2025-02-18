@@ -1,0 +1,46 @@
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+} */
+.ipa_container {
+    width: 80%;
+    margin: auto;
+}
+.lesson-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột mỗi hàng */
+    gap: 15px; 
+}
+.lesson-box {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.lesson-box .star {
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.lesson-box a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
+.lesson-box a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .lesson-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cột trên màn hình nhỏ */
+    }
+}
+@media (max-width: 480px) {
+    .lesson-grid {
+        grid-template-columns: 1fr; /* 1 cột trên màn hình rất nhỏ */
+    }
+}

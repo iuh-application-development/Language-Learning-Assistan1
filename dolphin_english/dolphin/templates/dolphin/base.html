@@ -7,11 +7,9 @@
     <title>Dolphin</title>
     <!-- {% static 'dolphin/css/gramma.css'%} -->
     <link rel="stylesheet" href="{% static 'dolphin/css/base.css'%}?{% now 'U' %}">
-<<<<<<< Updated upstream
     <link rel="stylesheet" href="{% static 'dolphin/css/gramma.css'%}?{% now 'U' %}">
     <link rel="stylesheet" href="{% static 'dolphin/css/listen.css'%}?{% now 'U' %}">
-=======
->>>>>>> Stashed changes
+    <link rel="stylesheet" href="{% static 'dolphin/css/ipa.css'%}?{% now 'U' %}">
 </head>
 <body>
     <div id="header">
@@ -36,6 +34,8 @@
     <div id="content">
         {% block banner_slide %}{% endblock banner_slide %}
         {% block listen %}{% endblock listen %}
+        {% block ipa_listen %}{% endblock ipa_listen %}
+        
     </div>
     <div id="footer">
         <div id="footer-container">

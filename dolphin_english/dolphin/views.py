@@ -10,3 +10,6 @@ def gramma_view(request):
 
 def listen_view(request):
     return render(request, 'dolphin/listen.html')
+
+def listen_view_ipa(request):
+    return render(request, 'dolphin/ipa.html')
