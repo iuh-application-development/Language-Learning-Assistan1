@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{% static 'dolphin/css/listen.css'%}?{% now 'U' %}">
     <link rel="stylesheet" href="{% static 'dolphin/css/register.css'%}?{% now 'U' %}">
     <link rel="stylesheet" href="{% static 'dolphin/css/login.css'%}?{% now 'U' %}">
+    {% comment %} <link rel="stylesheet" href="{% static 'dolphin/css/home.css'%}?{% now 'U' %}"> {% endcomment %}
 
     <!-- Listen View CSS -->
     <link rel="stylesheet" href="{% static 'dolphin/css/listen/ipa.css'%}?{% now 'U' %}">
@@ -39,16 +40,17 @@
         <div class="main-content">
             {% block home %}{% endblock home %}
             {% block listen %}{% endblock listen %}
-            <!-- Listen view -->
+            <!-- home content view -->
+            {% block home_content %}{% endblock home_content %}
+            <!-- listen view -->
             {% block ipa %}{% endblock ipa %}
-
             <!-- /Listen view -->
             {% block grammar %}{% endblock grammar %}
             {% block login %}{% endblock login %}
             {% block register %}{% endblock register %}
         </div>
     </div>
-
+    
     <footer>
         <div class="footer-content">
             <div class="footer-column">

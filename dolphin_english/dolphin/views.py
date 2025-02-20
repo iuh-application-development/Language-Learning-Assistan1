@@ -7,6 +7,9 @@ def home(request):
     # in ra xin chao
     return render(request, 'dolphin/base.html')
 
+# def home_view(request):
+#     return render(request, 'dolphin/home.html')
+
 def gramma_view(request):
     return render(request, 'dolphin/grammar.html')
 
