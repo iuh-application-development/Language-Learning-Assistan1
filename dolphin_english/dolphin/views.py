@@ -182,5 +182,14 @@ def listen_view_ipa(request):
 def listen_view_numbers(request):
     return render(request, 'dolphin/listen/numbers.html')
 
+
 def listen_view_spelling_names(request):
-    return render(request, 'dolphin/listen/spelling-names.html')
+    spelling_names_lessons = [
+        {"title": "Female Names", "link": "#"},
+        {"title": "Last Names", "link": "#"},
+        {"title": "Random Letters (British Accent)", "link": "#"},
+        {"title": "Male Names", "link": "#"},
+        {"title": "Animal names", "link": "#"},
+        {"title": "Random Letters (American Accent))", "link": "#"},
+    ]
+    return render(request, 'dolphin/listen/spelling-names.html', {"ispelling_names": spelling_names_lessons})

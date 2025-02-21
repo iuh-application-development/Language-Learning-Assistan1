@@ -1,0 +1,17 @@
+{% extends "dolphin/base.html" %}
+{% load static %}
+{% block ipa %}
+<div class="spelling_names_container">
+    <h2>Spelling Names</h2>
+    <div class="lesson-grid">
+        {% for spelling_names in ispelling_names %}
+            <div class="lesson-box">
+                <span class="star">☆</span>
+                <a href="{{spelling_names.link }}">{{spelling_names.title}}</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock ipa %}
+    
+
