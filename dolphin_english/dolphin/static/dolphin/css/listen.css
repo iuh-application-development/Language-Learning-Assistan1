@@ -30,6 +30,7 @@ h1 {
 .topic-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* color: red; */
 }
 
 /*  Hình ảnh của mỗi topic */
@@ -55,7 +56,7 @@ h1 {
 }
 
 .topic-title:hover {
-  text-decoration: underline;
+  color: red;
 }
 
 /*  Dòng thông tin phụ */
