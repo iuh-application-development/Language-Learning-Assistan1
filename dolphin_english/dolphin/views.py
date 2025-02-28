@@ -179,8 +179,21 @@ def listen_view_ipa(request):
     return render(request, "dolphin/listen/ipa.html", {"ipas": ipa_lessons})
 
 
+
 def listen_view_numbers(request):
-    return render(request, 'dolphin/listen/numbers.html')
+    numbers_lessons = [
+        {"title": "Phone numbers", "link": "#"},
+        {"title": "Numbers (1)", "link": "#"},
+        {"title": "Numbers (2)", "link": "#"},
+        {"title": "Numbers (3)", "link": "#"},
+        {"title": "Numbers (4)", "link": "#"},
+        {"title": "Numbers (5)", "link": "#"},
+        {"title": "Numbers (6)", "link": "#"},
+        {"title": "Numbers (7)", "link": "#"},
+        {"title": "Numbers (8)", "link": "#"},
+    ]
+    return render(request, 'dolphin/listen/numbers.html', {"inumbers": numbers_lessons})
+
 
 
 def listen_view_spelling_names(request):
