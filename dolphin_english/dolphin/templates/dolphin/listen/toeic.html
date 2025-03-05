@@ -1,0 +1,3500 @@
+{% extends "dolphin/base.html" %}
+{% load static %}
+{% block toeic-listening %}
+
+
+<div class="search-container">
+    <!-- Breadcrumb navigation -->
+    <nav class="breadcrumb">
+        <a href="#" class="breadcrumb__link">All topics</a>
+        <span class="breadcrumb__separator">/</span>
+        <span class="breadcrumb__current">TOEIC Listening</span>
+    </nav>
+
+    <!-- Header section -->
+    <header class="header">
+        <h1 class="header__title">TOEIC Listening</h1>
+        
+        <!-- Search form -->
+        <form class="search-form">
+            <input type="text" class="search-form__input" placeholder="Search">
+            
+            <div class="search-form__select-wrapper">
+                <select class="search-form__select">
+                    <option value="all">All levels</option>
+                    <option value="A1">A2</option>
+                    <option value="A2">B1</option>
+                    <option value="B1">B2</option>
+                    <option value="B1">C1</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <button type="submit" class="search-form__button">OK</button>
+        </form>
+    </header>
+</div>
+
+
+
+<!-- Sections -->
+<div class="toeic-listening-container">
+        <div class="section">
+            <!-- Using checkbox hack for expand/collapse functionality -->
+            <!--Section 1-->
+            <input type="checkbox" id="section1" class="section__toggle">
+            <label for="section1" class="section__header">
+                <h2 class="section__title">Section 1 <span class="section__count">(20 lessons)</span></h2>
+                <span class="section__arrow"></span>
+            </label>
+
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 1 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 1</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 2 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 2</h3>
+                        <p class="lesson-card__meta">19 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 3 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 3</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Conversation 4 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 4</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 5 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 5</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 6 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 6</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 7 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 7</h3>
+                        <p class="lesson-card__meta">19 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 8 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 8</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 9 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 9</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 10 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 10</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 1 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 1</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 2 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 2</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 3 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 3</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 4 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 4</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 5 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 5</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 6 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 6</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 7 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 7</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 8 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 8</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 9 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 9</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 10 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 10</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!--Section 2-->
+            <div class="section">
+            <input type="checkbox" id="section2" class="section__toggle">
+            <label for="section2" class="section__header">
+            <h2 class="section__title">Section 2 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 11 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 11</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 12 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 12</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 13 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 13</h3>
+                        <p class="lesson-card__meta">19 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 14 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 14</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 15 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 15</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 16 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 16</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 17 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 17</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 18 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 18</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 19 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 19</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 20 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 20</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 11 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 11</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 12 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 12</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 13 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 13</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 14 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 14</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 15 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 15</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 16 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 16</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 17 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 17</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 18 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 18</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 19 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 19</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 20 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 20</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B2</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 3-->
+            <div class="section">
+            <input type="checkbox" id="section3" class="section__toggle">
+            <label for="section3" class="section__header">
+            <h2 class="section__title">Section 3 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 21 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 21</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 22 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 22</h3>
+                        <p class="lesson-card__meta">21 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 23 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 23</h3>
+                        <p class="lesson-card__meta">22 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 24 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 24</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 25 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 25</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 26 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 26</h3>
+                        <p class="lesson-card__meta">22 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 27 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 27</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 28 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 28</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 29 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 29</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 30 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 30</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 21 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 21</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 22 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 22</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 23 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 23</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 24 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 24</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 25 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 25</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 26 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 26</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 27 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 27</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 28 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 28</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 29 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 29</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 30 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 30</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 4-->
+            <div class="section">
+            <input type="checkbox" id="section4" class="section__toggle">
+            <label for="section4" class="section__header">
+            <h2 class="section__title">Section 4 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 31 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 31</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 32 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 32</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 33 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 33</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 34 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 34</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 35 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 35</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 36 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 36</h3>
+                        <p class="lesson-card__meta">23 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 37 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 37</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 38 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 38</h3>
+                        <p class="lesson-card__meta">19 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 39 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 39</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 40 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 40</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 31 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 31</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 32 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 32</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 33 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 33</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 34 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 34</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 35 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 35</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 36 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 36</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 37 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 37</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 38 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 38</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 39 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 39</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 40 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 40</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 5-->
+            <div class="section">
+            <input type="checkbox" id="section5" class="section__toggle">
+            <label for="section5" class="section__header">
+            <h2 class="section__title">Section 5 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 41 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 41</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 42 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 42</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 43 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 43</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 44 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 44</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 45 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 45</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 46 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 46</h3>
+                        <p class="lesson-card__meta">18 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 47 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 47</h3>
+                        <p class="lesson-card__meta">19 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 48 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 48</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 49 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 49</h3>
+                        <p class="lesson-card__meta">18 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 50 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 50</h3>
+                        <p class="lesson-card__meta">19 parts · Vocab level: B2</p>
+                    </div>
+
+                    <!-- Short Talk 41 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 41</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 42 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 42</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 43 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 43</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 44 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 44</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 45 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 45</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 46 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 46</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 47 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 47</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 48 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 48</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 49 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 49</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 50 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 50</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 6-->
+            <div class="section">
+            <input type="checkbox" id="section6" class="section__toggle">
+            <label for="section6" class="section__header">
+            <h2 class="section__title">Section 6 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 51 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 51</h3>
+                        <p class="lesson-card__meta">24 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 52 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 52</h3>
+                        <p class="lesson-card__meta">18 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 53 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 53</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 54 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 54</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 55 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 55</h3>
+                        <p class="lesson-card__meta">18 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 56 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 56</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 57 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 57</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 58 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 58</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 59 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 59</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 60 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 60</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 51 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 51</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 52 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 52</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 53 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 53</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 54 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 54</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 55 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 55</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 56 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 56</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 57 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 57</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 58 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 58</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 59 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 59</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 60 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 60</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 7-->
+            <div class="section">
+            <input type="checkbox" id="section7" class="section__toggle">
+            <label for="section7" class="section__header">
+            <h2 class="section__title">Section 7 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 61 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 61</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 62 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 62</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 63 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 63</h3>
+                        <p class="lesson-card__meta">24 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 64 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 64</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 65 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 65</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 66 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 66</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 67 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 67</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 68 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 68</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 69 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 69</h3>
+                        <p class="lesson-card__meta">19 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 70 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 70</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 61 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 61</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 62 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 62</h3>
+                        <p class="lesson-card__meta">6 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 63 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 63</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 64 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 64</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 65 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 65</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 66 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 66</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 67 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 67</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 68 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 68</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 69 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 69</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 70 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 70</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 8-->
+            <div class="section">
+            <input type="checkbox" id="section8" class="section__toggle">
+            <label for="section8" class="section__header">
+            <h2 class="section__title">Section 8 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 71 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 71</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 72 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 72</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 73 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 73</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 74 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 74</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 75 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 75</h3>
+                        <p class="lesson-card__meta">19 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 76 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 76</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 77 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 77</h3>
+                        <p class="lesson-card__meta">20 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 78 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 78</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 79 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 79</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 80 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 80</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 71 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 71</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 72 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 72</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 73 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 73</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 74 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 74</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 75 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 75</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 76 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 76</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 77 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 77</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 78 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 78</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 79 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 79</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 80 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 80</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 9-->
+            <div class="section">
+            <input type="checkbox" id="section9" class="section__toggle">
+            <label for="section9" class="section__header">
+            <h2 class="section__title">Section 9 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 81 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 81</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 82 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 82</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 83 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 83</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 84 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 84</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 85 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 85</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 86 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 86</h3>
+                        <p class="lesson-card__meta">18 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 87 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 87</h3>
+                        <p class="lesson-card__meta">20 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 88 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 88</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 89 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 89</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Conversation 90 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 90</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 81 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 81</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 82 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 82</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 83 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 83</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 84 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 84</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 85 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 85</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 86 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 86</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 87 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 87</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 88 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 88</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 89 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 89</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 90 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 90</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B2</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 10-->
+            <div class="section">
+            <input type="checkbox" id="section10" class="section__toggle">
+            <label for="section10" class="section__header">
+            <h2 class="section__title">Section 10 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 91 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 91</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 92 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 92</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 93 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 93</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 94 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 94</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 95 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 95</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Conversation 96 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 96</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 97 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 97</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 98 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 98</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 99 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 99</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 100 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 100</h3>
+                        <p class="lesson-card__meta">20 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 91 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 91</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 92 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 92</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 93 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 93</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 94 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 94</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 95 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 95</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 96 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 96</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 97 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 97</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 98 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 98</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 99 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 99</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 100 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 100</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Section 11-->
+            <div class="section">
+            <input type="checkbox" id="section11" class="section__toggle">
+            <label for="section11" class="section__header">
+            <h2 class="section__title">Section 11 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 101 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 101</h3>
+                        <p class="lesson-card__meta">22 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 102 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 102</h3>
+                        <p class="lesson-card__meta">20 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 103 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 103</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 104 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 104</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 105 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 105</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 106 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 106</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 107 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 107</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 108 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 108</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 109 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 109</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 110 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 110</h3>
+                        <p class="lesson-card__meta">18 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 101 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 101</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 102 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 102</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 103 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 103</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 104 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 104</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 105 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 105</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 106 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 106</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 107 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 107</h3>
+                        <p class="lesson-card__meta">6 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 108 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 108</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 109 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 109</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 110 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 110</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 12-->
+            <div class="section">
+            <input type="checkbox" id="section12" class="section__toggle">
+            <label for="section12" class="section__header">
+            <h2 class="section__title">Section 12 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 111 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 111</h3>
+                        <p class="lesson-card__meta">18 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 112 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 112</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 113 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 113</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 114 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 114</h3>
+                        <p class="lesson-card__meta">22 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 115 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 115</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 116 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 116</h3>
+                        <p class="lesson-card__meta">18 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 117 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 117</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 118 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 118</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 119 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 119</h3>
+                        <p class="lesson-card__meta">18 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 120 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 120</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 111 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 111</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 112 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 112</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 113 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 113</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 114 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 114</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 115 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 115</h3>
+                        <p class="lesson-card__meta">6 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 116 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 116</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 117 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 117</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 118 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 118</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 119 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 119</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 120 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 120</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 13-->
+            <div class="section">
+            <input type="checkbox" id="section13" class="section__toggle">
+            <label for="section13" class="section__header">
+            <h2 class="section__title">Section 13 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 121 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 121</h3>
+                        <p class="lesson-card__meta">18 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 122 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 122</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 123 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 123</h3>
+                        <p class="lesson-card__meta">18 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 124 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 124</h3>
+                        <p class="lesson-card__meta">19 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 125 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 125</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 126 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 126</h3>
+                        <p class="lesson-card__meta">26 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 127 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 127</h3>
+                        <p class="lesson-card__meta">22 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 128 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 128</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 129 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 129</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 130 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 130</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B2</p>
+                    </div>
+
+                    <!-- Short Talk 121 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 121</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 122 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 122</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 123 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 123</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 124 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 124</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 125 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 125</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 126 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 126</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 127 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 127</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 128 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 128</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 129 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 129</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 130 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 130</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 14-->
+            <div class="section">
+            <input type="checkbox" id="section14" class="section__toggle">
+            <label for="section14" class="section__header">
+            <h2 class="section__title">Section 14 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 131 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 131</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 132 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 132</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 133 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 133</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 134 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 134</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 135 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 135</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 136 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 136</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 137 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 137</h3>
+                        <p class="lesson-card__meta">21 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 138 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 138</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 139 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 139</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 140 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 140</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 131 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 131</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 132 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 132</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 133 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 133</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: C1</p>
+                    </div>
+                    <!-- Short Talk 134 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 134</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 135 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 135</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 136 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 136</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 137 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 137</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 138 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 138</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 139 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 139</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 140 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 140</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B2</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 15-->
+            <div class="section">
+            <input type="checkbox" id="section15" class="section__toggle">
+            <label for="section15" class="section__header">
+            <h2 class="section__title">Section 15 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 141 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 141</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 142 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 142</h3>
+                        <p class="lesson-card__meta">23 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 143 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 143</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 144 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 144</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 145 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 145</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 146 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 146</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 147 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 147</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 148 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 148</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 149 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 149</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 150 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 150</h3>
+                        <p class="lesson-card__meta">20 parts · Vocab level: B2</p>
+                    </div>
+
+                    <!-- Short Talk 141 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 141</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 142 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 142</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 143 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 143</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 144 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 144</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 145 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 145</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 146 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 146</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 147 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 147</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 148 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 148</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 149 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 149</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 150 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 150</h3>
+                        <p class="lesson-card__meta">6 parts · Vocab level: B1</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!--Section 16-->
+            <input type="checkbox" id="section16" class="section__toggle">
+            <label for="section16" class="section__header">
+                <h2 class="section__title">Section 16 <span class="section__count">(20 lessons)</span></h2>
+                <span class="section__arrow"></span>
+            </label>
+
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 151 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 151</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 152 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 152</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 153 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 153</h3>
+                        <p class="lesson-card__meta">20 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 154 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 154</h3>
+                        <p class="lesson-card__meta">22 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 155 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 155</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 156 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 156</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 157 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 157</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 158 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 158</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 159 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 159</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 160 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 160</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 151 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 151</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 152 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 152</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 153 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 153</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 154 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 154</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 155 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 155</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 156 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 156</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 157 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 157</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 158 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 158</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 159 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 159</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 160 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 160</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!--Section 17-->
+            <div class="section">
+            <input type="checkbox" id="section17" class="section__toggle">
+            <label for="section17" class="section__header">
+            <h2 class="section__title">Section 17 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 161 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 161</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 162 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 162</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 163 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 163</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 164 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 164</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 165 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 165</h3>
+                        <p class="lesson-card__meta">22 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 166 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 166</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 167 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 167</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 168 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 168</h3>
+                        <p class="lesson-card__meta">20 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 169 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 169</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 170 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 170</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 161 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 161</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Short Talk 162 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 162</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 163 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 163</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 164 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 164</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 165 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 165</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 166 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 166</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 167 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 167</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 168 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 168</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 169 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 169</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 170 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 170</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B2</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 18-->
+            <div class="section">
+            <input type="checkbox" id="section18" class="section__toggle">
+            <label for="section18" class="section__header">
+            <h2 class="section__title">Section 18 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 171 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 171</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 172 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 172</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 173 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 173</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 174 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 174</h3>
+                        <p class="lesson-card__meta">21 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 175 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 175</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 176 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 176</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 177 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 177</h3>
+                        <p class="lesson-card__meta">18 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 178 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 178</h3>
+                        <p class="lesson-card__meta">24 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 179 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 179</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 180 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 180</h3>
+                        <p class="lesson-card__meta">19 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 171 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 171</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 172 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 172</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 173 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 173</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 174 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 174</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 175 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 175</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 176 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 176</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 177 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 177</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 178 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 178</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 179 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 179</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: C1</p>
+                    </div>
+                    <!-- Short Talk 180 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 180</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 19-->
+            <div class="section">
+            <input type="checkbox" id="section19" class="section__toggle">
+            <label for="section19" class="section__header">
+            <h2 class="section__title">Section 19 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 181 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 181</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 182 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 182</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 183 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 183</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 184 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 184</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 185 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 185</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 186 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 186</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 187 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 187</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 188 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 188</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 189 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 189</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 190 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 190</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 181 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 181</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 182 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 182</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 183 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 183</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 184 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 184</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 185 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 185</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 186 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 186</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 187 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 187</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 188 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 188</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Short Talk 189 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 189</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 190 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 190</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Section 20-->
+            <div class="section">
+            <input type="checkbox" id="section20" class="section__toggle">
+            <label for="section20" class="section__header">
+            <h2 class="section__title">Section 20 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 191 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 191</h3>
+                        <p class="lesson-card__meta">18 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 192 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 192</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 193 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 193</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 194 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 194</h3>
+                        <p class="lesson-card__meta">22 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 195 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 195</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 196 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 196</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 197 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 197</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 198 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 198</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 199 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 199</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 200 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 200</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 191 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 191</h3>
+                        <p class="lesson-card__meta">6 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 192 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 192</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 193 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 193</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 194 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 194</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 195 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 195</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 196 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 196</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 197 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 197</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 198 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 198</h3>
+                        <p class="lesson-card__meta">6 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 199 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 199</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 200 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 200</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B1</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 21-->
+            <div class="section">
+            <input type="checkbox" id="section21" class="section__toggle">
+            <label for="section21" class="section__header">
+            <h2 class="section__title">Section 21 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 201 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 201</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 202 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 202</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 203 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 203</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 204 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 204</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 205 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 205</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 206 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 206</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Conversation 207 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 207</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 208 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 208</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 209 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 209</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 210 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 210</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 201 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 201</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 202 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 202</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 203 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 203</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 204 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 204</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 205 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 205</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 206 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 206</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 207 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 207</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 208 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 208</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 209 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 209</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 210 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 210</h3>
+                        <p class="lesson-card__meta">6 parts · Vocab level: B1</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 22-->
+            <div class="section">
+            <input type="checkbox" id="section22" class="section__toggle">
+            <label for="section22" class="section__header">
+            <h2 class="section__title">Section 22 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 211 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 211</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 212 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 212</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 213 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 213</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 214 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 214</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 215 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 215</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 216 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 216</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 217 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 217</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 218 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 218</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 219 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 219</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 220 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 220</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B2</p>
+                    </div>
+
+                    <!-- Short Talk 211 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 211</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 212 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 212</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: C1</p>
+                    </div>
+                    <!-- Short Talk 213 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 213</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 214 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 214</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 215 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 215</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: C1</p>
+                    </div>
+                    <!-- Short Talk 216 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 216</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: C1</p>
+                    </div>
+                    <!-- Short Talk 217 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 217</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 218 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 218</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: C1</p>
+                    </div>
+                    <!-- Short Talk 219 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 219</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 220 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 220</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 23-->
+            <div class="section">
+            <input type="checkbox" id="section23" class="section__toggle">
+            <label for="section23" class="section__header">
+            <h2 class="section__title">Section 23 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 221 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 221</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 222 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 222</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 223 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 223</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 224 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 224</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 225 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 225</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 226 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 226</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 227 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 227</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 228 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 228</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 229 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 229</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 230 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 230</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B2</p>
+                    </div>
+
+                    <!-- Short Talk 221 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 221</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 222 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 222</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 223 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 223</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 224 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 224</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 225 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 225</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Short Talk 226 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 226</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 227 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 227</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 228 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 228</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: C1</p>
+                    </div>
+                    <!-- Short Talk 229 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 229</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 230 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 230</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B2</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 24-->
+            <div class="section">
+            <input type="checkbox" id="section24" class="section__toggle">
+            <label for="section24" class="section__header">
+            <h2 class="section__title">Section 24 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 231 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 231</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 232 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 232</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 233 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 233</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 234 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 234</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 235 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 235</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 236 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 236</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 237 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 237</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 238 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 238</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 239 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 239</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 240 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 240</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B2</p>
+                    </div>
+
+                    <!-- Short Talk 231 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 231</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 232 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 232</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 233 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 233</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 234 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 234</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 235 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 235</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 236 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 236</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 237 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 237</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: C1</p>
+                    </div>
+                    <!-- Short Talk 238 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 238</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: C1</p>
+                    </div>
+                    <!-- Short Talk 239 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 239</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 240 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 240</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Section 25-->
+            <div class="section">
+            <input type="checkbox" id="section25" class="section__toggle">
+            <label for="section25" class="section__header">
+            <h2 class="section__title">Section 25 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 241 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 241</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 242 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 242</h3>
+                        <p class="lesson-card__meta">6 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 243 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 243</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 244 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 244</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 245 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 245</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 246 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 246</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 247 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 247</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 248 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 248</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 249 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 249</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 250 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 250</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 241 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 241</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 242 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 242</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 243 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 243</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 244 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 244</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 245 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 245</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 246 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 246</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 247 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 247</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 248 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 248</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 249 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 249</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 250 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 250</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 26-->
+            <div class="section">
+            <input type="checkbox" id="section26" class="section__toggle">
+            <label for="section26" class="section__header">
+            <h2 class="section__title">Section 26 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 251 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 251</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 252 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 252</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 253 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 253</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 254 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 254</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 255 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 255</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 256 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 256</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 257 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 257</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 258 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 258</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 259 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 259</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 260 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 260</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 251 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 251</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 252 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 252</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 253 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 253</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 254 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 254</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 255 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 255</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 256 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 256</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 257 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 257</h3>
+                        <p class="lesson-card__meta">6 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 258 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 258</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 259 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 259</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 260 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 260</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 27-->
+            <div class="section">
+            <input type="checkbox" id="section27" class="section__toggle">
+            <label for="section27" class="section__header">
+            <h2 class="section__title">Section 27 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 261 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 261</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 262 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 262</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 263 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 263</h3>
+                        <p class="lesson-card__meta">18 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 264 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 264</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 265 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 265</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 266 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 266</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 267 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 267</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 268 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 268</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 269 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 269</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 270 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 270</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 261 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 261</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 262 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 262</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 263 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 263</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 264 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 264</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 265 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 265</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 266 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 266</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 267 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 267</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 268 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 268</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 269 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 269</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 270 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 270</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B2</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Section 28-->
+            <div class="section">
+            <input type="checkbox" id="section28" class="section__toggle">
+            <label for="section28" class="section__header">
+            <h2 class="section__title">Section 28 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 271 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 271</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 272 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 272</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 273 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 273</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 274 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 274</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 275 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 275</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 276 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 276</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 277 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 277</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 278 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 278</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 279 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 279</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Conversation 280 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 280</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 271 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 271</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 272 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 272</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 273 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 273</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 274 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 274</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 275 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 275</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 276 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 276</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 277 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 277</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: C1</p>
+                    </div>
+                    <!-- Short Talk 278 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 278</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 279 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 279</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 280 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 280</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Section 29-->
+            <div class="section">
+            <input type="checkbox" id="section29" class="section__toggle">
+            <label for="section29" class="section__header">
+            <h2 class="section__title">Section 29 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 281 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 281</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 282 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 282</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 283 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 283</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 284 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 284</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 285 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 285</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 286 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 286</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 287 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 287</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 288 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 288</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 289 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 289</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 290 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 290</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B2</p>
+                    </div>
+
+                    <!-- Short Talk 281 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 281</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 282 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 282</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 283 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 283</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 284 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 284</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 285 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 285</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: C1</p>
+                    </div>
+                    <!-- Short Talk 286 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 286</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 287 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 287</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 288 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 288</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 289 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 289</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 290 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 290</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B2</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Section 30-->
+            <div class="section">
+            <input type="checkbox" id="section30" class="section__toggle">
+            <label for="section30" class="section__header">
+            <h2 class="section__title">Section 30 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Conversation 291 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 291</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 292 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 292</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 293 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 293</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 294 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 294</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 295 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 295</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 296 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 296</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 297 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 297</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 298 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 298</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Conversation 299 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 299</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Conversation 300 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Conversation 300</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+
+                    <!-- Short Talk 291 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 291</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 292 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 292</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 293 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 293</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 294 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 294</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 295 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 295</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 296 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 296</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: C1</p>
+                    </div>
+                    <!-- Short Talk 297 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 297</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 298 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 298</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Short Talk 299 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 299</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B2</p>
+                    </div>
+                    <!-- Short Talk 300 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">Short Talk 300</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+<script src="{% static 'dolphin/js/script_sections.js' %}"></script>
+
+{% endblock toeic-listening %}
+    
+
