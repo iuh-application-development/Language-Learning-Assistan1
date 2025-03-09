@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SITE_ID = 2
 
 # Application definition
 
@@ -39,11 +40,13 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "dolphin",
+    "django.contrib.sites",
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google', 
 ]
+
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
@@ -65,13 +68,21 @@ MIDDLEWARE = [
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
-        'APP': {
-            'client_id': '1097120739541-6gkm6me5frsnvo1pdddcsvanv8d0hdp2.apps.googleusercontent.com',
-            'secret': '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',
-            'key': ''
-        }
+        'SCOPE':['profile','email'],
+        'AUTH_PARAMS': {'access_type':"online", "prompt":"select_account"}
     }
 }
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
+
+SOCIALACCOUNT_LOGIN_ON_GET = True
+SOCIALACCOUNT_AUTO_SIGNUP = True  # Tự động đăng ký tài khoản mới
+ACCOUNT_SIGNUP_REDIRECT_URL = "/"  # Chuyển hướng về home nếu phải đăng ký
+ACCOUNT_EMAIL_REQUIRED = True  # Bắt buộc có email
+ACCOUNT_USERNAME_REQUIRED = False  # Không yêu cầu username
+ACCOUNT_AUTHENTICATION_METHOD = "email"  # Xác thực bằng email thay vì username
+ACCOUNT_UNIQUE_EMAIL = True  # Email phải là duy nhất
 
 
 
@@ -142,12 +153,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = "static/"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "dolphin/static")]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-LOGIN_REDIRECT_URL = "home"
-LOGOUT_REDIRECT_URL = "home"

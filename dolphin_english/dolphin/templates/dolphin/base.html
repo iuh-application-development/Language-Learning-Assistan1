@@ -13,6 +13,8 @@
 
     <!-- Listen View CSS -->
     <link rel="stylesheet" href="{% static 'dolphin/css/listen/ipa.css'%}?{% now 'U' %}">
+    <link rel="stylesheet" href="{% static 'dolphin/css/listen/conversations.css'%}?{% now 'U' %}">
+    <link rel="stylesheet" href="{% static 'dolphin/css/listen/ielts.css'%}?{% now 'U' %}">
 
     <!-- /Listen View CSS -->
 </head>
@@ -37,13 +39,21 @@
       </header>
     <div class="page-content">
         <div class="main-content">
-            {% block home %}{% endblock home %}
+            {% block home %}
+
+            {% endblock home %}
             {% block listen %}{% endblock listen %}
+            
             <!-- Listen view -->
             {% block ipa %}{% endblock ipa %}
+            {% block conversations %}{% endblock conversations %}
+            {% block ielts-listening %}{% endblock ielts-listening %}
 
             <!-- /Listen view -->
-            {% block grammar %}{% endblock grammar %}
+            {% block grammar %}
+                {% block backToTop %}   
+                {% endblock backToTop %}
+            {% endblock grammar %}
             {% block login %}{% endblock login %}
             {% block register %}{% endblock register %}
         </div>

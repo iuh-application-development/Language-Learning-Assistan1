@@ -1,0 +1,618 @@
+{% extends "dolphin/base.html" %}
+{% load static %}
+{% block conversations %}
+
+<div class="search-container">
+    <!-- Breadcrumb navigation -->
+    <nav class="breadcrumb">
+        <a href="{% url 'listen' %}" class="breadcrumb__link">All topics</a>
+        <span class="breadcrumb__separator">/</span>
+        <span class="breadcrumb__current">Conversations</span>
+    </nav>
+
+    <!-- Header section -->
+    <header class="header">
+        <h1 class="header__title">Conversations</h1>
+        
+        <!-- Search form -->
+        <form class="search-form">
+            <input type="text" class="search-form__input" placeholder="Search">
+            
+            <div class="search-form__select-wrapper">
+                <select class="search-form__select">
+                    <option value="all">All levels</option>
+                    <option value="A1">A1</option>
+                    <option value="A2">A2</option>
+                    <option value="B1">B1</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <button type="submit" class="search-form__button">OK</button>
+        </form>
+    </header>
+</div>
+
+
+
+<!-- Sections -->
+<div class="conversations-container">
+        <div class="section">
+            <!-- Using checkbox hack for expand/collapse functionality -->
+            <!--Section 1-->
+            <input type="checkbox" id="section1" class="section__toggle">
+            <label for="section1" class="section__header">
+                <h2 class="section__title">Section 1 <span class="section__count">(20 lessons)</span></h2>
+                <span class="section__arrow"></span>
+            </label>
+
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Lesson 1 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">1. At home (1)</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 2 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">2. At home (2)</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 3 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">3. My Favorite Photographs (1)</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 4 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">4. Location</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 5 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">5. Location (2)</h3>
+                        <p class="lesson-card__meta">6 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 6 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">6. Color (1)</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 7 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">7. Color (2)</h3>
+                        <p class="lesson-card__meta">5 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 8 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">8. No questions</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 9 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">9. Short Answer</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 10 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">10. Telephone call (2)</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 11 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">11. What's A Grant?</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 12 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">12. I'm Busy On Friday</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 13 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">13. Bless You</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 14 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">14. I Don't Feel Well</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 15 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">15. Can You Help Me?</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 16 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">16. Taking a Cab</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 17 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">17. I Hate to Get Up</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 18 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">18. A Hot Day</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 19 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">19. Phone Out of Order (1)</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 20 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">20. Phone Out of Order (2)</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!--Section 2-->
+            <div class="section">
+            <input type="checkbox" id="section2" class="section__toggle">
+            <label for="section2" class="section__header">
+            <h2 class="section__title">Section 2 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Lesson 21 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">21. Getting A Visa</h3>
+                        <p class="lesson-card__meta">6 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 22 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">22. Employing a new member</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 23 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">23. A Date (1)</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 24 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">24. What did you do yesterday?</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 25 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">25. Travelling by Air</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 26 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">26. At the Customs</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 27 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">27. A New Baby</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 28 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">28. Is English Difficult?</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 29 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">29. Washing His Car</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 30 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">30. At the Restaurant</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 31 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">31. When's the Baby Due?</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 32 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">32. Bus Stop</h3>
+                        <p class="lesson-card__meta">20 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 33 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">33. Gardening</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 34 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">34. A Lazy Boy</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 35 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">35. Can I Drive There?</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 36 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">36. A New Dress</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 37 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">37. A picnic</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 38 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">38. I'm Going Skiing</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 39 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">39. Traffic Rules (1)</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 40 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">40. Housework</h3>
+                        <p class="lesson-card__meta">18 parts · Vocab level: B1</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Section 3-->
+            <div class="section">
+            <input type="checkbox" id="section3" class="section__toggle">
+            <label for="section3" class="section__header">
+            <h2 class="section__title">Section 3 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Lesson 41 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">41. A Broken Window</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 42 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">42. A School Trip</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 43 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">43. Going to the Zoo</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 44 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">44. Buying a Present</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 45 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">45. A Snowy Day</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 46 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">46. A Walk in the Park</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 47 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">47. My Best Friend</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 48 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">48. My Favorite Hobby</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 49 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">49. A New Bicycle</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 50 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">50. Visiting Grandma</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 51 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">51. A Day at the Beach</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 52 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">52. Shopping for Clothes</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 53 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">53. A Rainy Afternoon</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 54 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">54. A Birthday Party</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 55 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">55. A Busy Week</h3>
+                        <p class="lesson-card__meta">18 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 56 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">56. Preparing for Exams</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 57 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">57. A Weekend with Family</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 58 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">58. The First Day of School</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 59 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">59. Learning a New Language</h3>
+                        <p class="lesson-card__meta">17 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 60 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">60. A Visit to the Doctor</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: A1</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Section 4-->
+            <div class="section">
+            <input type="checkbox" id="section4" class="section__toggle">
+            <label for="section4" class="section__header">
+            <h2 class="section__title">Section 4 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Lesson 61 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">61. Afraid of Flying</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 62 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">62. A Plane Reservation</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 63 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">63. Getting Together</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 64 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">64. How's Your New Job Going?</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 65 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">65. We Eat a Lot</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 66 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">66. I'll Take You</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 67 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">67. We Must be Out of Them</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 68 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">68. Doctor's Appointment</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 69 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">69. Traffic Rules (2)</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 70 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">70. Eating out</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 71 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">71. To Buy a Bus Ticket</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 72 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">72. On the Phone</h3>
+                        <p class="lesson-card__meta">14 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 73 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">73. Operating Room</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 74 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">74. A Car Loan</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 75 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">75. A Cashier</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 76 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">76. Settling Down</h3>
+                        <p class="lesson-card__meta">8 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 77 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">77. Will You Get Some Bread For Me?</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 78 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">78. Buying a Present - In a Jeweller's shop</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 79 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">79. Buying a Present - In a Toy Shop</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 80 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">80. Making a Reservation</h3>
+                        <p class="lesson-card__meta">19 parts · Vocab level: A2</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Section 5-->
+            <div class="section">
+            <input type="checkbox" id="section5" class="section__toggle">
+            <label for="section5" class="section__header">
+            <h2 class="section__title">Section 5 <span class="section__count">(20 lessons)</span></h2>
+            <span class="section__arrow"></span>
+            </label>
+            <div class="section__content">
+                <div class="lessons-grid">
+                    <!-- Lesson 81 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">81. Ready to Go</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 82 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">82. An Interesting Movie</h3>
+                        <p class="lesson-card__meta">7 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 83 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">83. A New Job</h3>
+                        <p class="lesson-card__meta">16 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 84 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">84. A Date (2)</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 85 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">85. Smoking</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 86 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">86. A Death</h3>
+                        <p class="lesson-card__meta">12 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 87 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">87. A Birth</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 88 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">88. A Coincidence</h3>
+                        <p class="lesson-card__meta">15 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 89 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">89. How have you been?</h3>
+                        <p class="lesson-card__meta">21 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 90 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">90. Applying for a job</h3>
+                        <p class="lesson-card__meta">25 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 91 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">91. Giving Directions</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 92 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">92. Talking about pets</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A1</p>
+                    </div>
+                    <!-- Lesson 93 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">93. Where is the post office</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 94 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">94. Meeting an old friend</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 95 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">95. Using public transportation</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 96 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">96. Cafeteria menu</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 97 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">97. Weekend plans</h3>
+                        <p class="lesson-card__meta">11 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 98 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">98. Visiting a national park</h3>
+                        <p class="lesson-card__meta">10 parts · Vocab level: A2</p>
+                    </div>
+                    <!-- Lesson 99 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">99. Bad room service</h3>
+                        <p class="lesson-card__meta">9 parts · Vocab level: B1</p>
+                    </div>
+                    <!-- Lesson 100 -->
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title">100. Photography class</h3>
+                        <p class="lesson-card__meta">13 parts · Vocab level: B1</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+<script src="{% static 'dolphin/js/script_sections.js' %}"></script>
+
+{% endblock conversations %}
+    

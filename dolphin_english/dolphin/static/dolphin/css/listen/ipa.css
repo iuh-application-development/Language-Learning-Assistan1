@@ -4,7 +4,9 @@
     margin-top: 100px;
     margin-bottom: 100px;
 }
-
+.ipa_container h2 {
+    font-size: 40px;
+}
 /* Tạo lưới bài học */
 .lesson-grid {
     display: grid;

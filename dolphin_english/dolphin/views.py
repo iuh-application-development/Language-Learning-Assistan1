@@ -5,7 +5,7 @@ from django.contrib.auth.models import auth
 # Create your views here.
 def home(request):
     # in ra xin chao
-    return render(request, 'dolphin/base.html')
+    return render(request, 'dolphin/home.html')
 
 def gramma_view(request):
     return render(request, 'dolphin/grammar.html')
