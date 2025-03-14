@@ -111,11 +111,16 @@ WSGI_APPLICATION = "ptud.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',  # Tên database (cố định là postgres trên Supabase)
+        'USER': 'postgres.xsutpoaldoomzirjkvzj',  # Tên user mặc định trên Supabase
+        'PASSWORD': 'tbReKoiyjQmIVmnx',  # Mật khẩu từ connection string
+        'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',  # Lấy từ Supabase connection string
+        'PORT': '6543',  # Cổng mặc định cho PostgreSQL
     }
 }
+# postgresql://postgres:[dolphin123456@@]@db.suuncnrzpfgpqudxdmmr.supabase.co:5432/postgres
 
 
 # Password validation
@@ -152,9 +157,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "dolphin/static")]
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 

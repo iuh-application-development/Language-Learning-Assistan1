@@ -1,18 +1,4 @@
 /* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.5;
-    color: #333;
-    background-color: #fff;
-}
-
 .ielts-listening-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -111,11 +97,12 @@ body {
     border-color: #93c5fd;
 }
 
-.lesson-card__title {
+.lesson-card__title a{
     color: #2563eb;
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 0.5rem;
+    text-decoration: none;
 }
 
 .lesson-card__meta {
@@ -124,7 +111,7 @@ body {
 }
 
 /* Additional hover effects */
-.lesson-card:hover .lesson-card__title {
+.lesson-card:hover .lesson-card__title a {
     color: #1d4ed8;
 }
 
@@ -159,24 +146,6 @@ body {
 
 
 
-
-
-
-/* CSS Search form */
-/* Base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border-radius: 0.3rem;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.5;
-    color: #333;
-}
-
 .search-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -204,24 +173,13 @@ body {
     color: #666;
 }
 
-.breadcrumb__current {
-    color: #666;
+.breadcrumb .breadcrumb__current {
+    color: #0066cc;
+    text-decoration: none;
 }
 
-/* Header styles */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header__title {
-    font-size: 32px;
-    font-weight: 600;
-    color: #333;
-    margin: 0; /* Xóa margin-bottom để thẳng hàng */
-    display: flex;
-    align-items: center; /* Đảm bảo thẳng hàng với các thành phần khác */
+.breadcrumb .breadcrumb__current:hover {
+    text-decoration: underline;
 }
 
 /* Search form styles */

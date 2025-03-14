@@ -1,17 +1,38 @@
 {% extends "dolphin/base.html" %}
 {% load static %}
 {% block ipa %}
+
+<div class="search-container">
+    <nav class="breadcrumb">
+        <a href="#" class="breadcrumb__link">All topics</a>
+        <span class="breadcrumb__separator">/</span>
+        <span class="breadcrumb__current">{{ topic.name }}</span>
+    </nav>
+
+    <header class="header">
+        <h1 class="header__title">{{ topic.name }}</h1>
+        
+        <form class="search-form">
+            <input type="text" class="search-form__input" placeholder="Search">
+            <button type="submit" class="search-form__button">OK</button>
+        </form>
+    </header>
+</div>
+
+<!-- Hiển thị danh sách SubTopics -->
 <div class="ipa_container">
-    <h2>IPA</h2>
+    <h2>{{ topic.title }}</h2>
     <div class="lesson-grid">
-        {% for ipa in ipas %}
+        {% for subtopic in subtopics %}
             <div class="lesson-box">
                 <span class="star">☆</span>
-                <a href="{{ ipa.link }}">{{ipa.title}}</a>
+                <a href="{% url 'listen_and_type' topic.slug subtopic.slug %}">{{ subtopic.title }}</a>
             </div>
+        {% empty %}
+            <p>Không có bài học nào.</p>
         {% endfor %}
     </div>
 </div>
-{% endblock ipa %}
-    
 
+
+{% endblock ipa %}

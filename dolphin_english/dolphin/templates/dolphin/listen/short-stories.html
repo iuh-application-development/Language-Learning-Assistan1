@@ -1,0 +1,73 @@
+{% extends "dolphin/base.html" %}
+{% load static %}
+{% block short-stories %}
+
+
+<div class="search-container">
+    <!-- Breadcrumb navigation -->
+    <nav class="breadcrumb">
+        <a href="{% url 'listen' %}" class="breadcrumb__link">All topics</a>
+        <span class="breadcrumb__separator">/</span>
+        <span class="breadcrumb__current">Short stories</span>
+    </nav>
+
+    <!-- Header section -->
+    <header class="header">
+        <h1 class="header__title">Short stories</h1>
+        
+        <!-- Search form -->
+        <form class="search-form">
+            <input type="text" class="search-form__input" placeholder="Search">
+            
+            <div class="search-form__select-wrapper">
+                <select class="search-form__select">
+                    <option value="all">All levels</option>
+                    <option value="A1">A1</option>
+                    <option value="A1">A2</option>
+                    <option value="A1">B1</option>
+                    <option value="A2">B2</option>
+                    <option value="B1">C1</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <button type="submit" class="search-form__button">OK</button>
+        </form>
+    </header>
+</div>
+
+
+
+<!-- Sections -->
+
+<div class="short_story_container">
+    {% for section in sections %}
+            <!-- Using checkbox hack for expand/collapse functionality -->
+            <!--Section 1-->
+            <div class="section">
+                    <input type="checkbox" id="section{{section.order}}" class="section__toggle">
+                    <label for="section{{section.order}}" class="section__header">
+                        <h2 class="section__title">{{section.title}} <span class="section__count">({{section.subtopics.count}} lessons)</span></h2>
+                        <span class="section__arrow"></span>
+                    </label>
+                
+                <div class="section__content">
+                    <div class="lessons-grid">
+                        <!-- Lesson 1 -->
+                        {% for sub in section.subtopics.all %}
+                        <div class="lesson-card">
+                            <h3 class="lesson-card__title"><a href="{% url 'listen_and_type' topic.slug sub.slug %}">{{sub.title}}</a></h3>
+                            <p class="lesson-card__meta">{{sub.num_part}} parts · Vocab level: {{sub.level}}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+</div>
+        
+<script src="{% static 'dolphin/js/script_sections.js' %}"></script>
+
+{% endblock short-stories %}
+    
+

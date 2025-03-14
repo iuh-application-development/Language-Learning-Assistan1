@@ -1,0 +1,42 @@
+{% extends "dolphin/base.html" %}
+{% load static %}
+{% block spelling_names %}
+
+
+<div class="search-container">
+    <!-- Breadcrumb navigation -->
+    <nav class="breadcrumb">
+        <a href="#" class="breadcrumb__link">All topics</a>
+        <span class="breadcrumb__separator">/</span>
+        <span class="breadcrumb__current">Spelling Names</span>
+    </nav>
+
+    <!-- Header section -->
+    <header class="header">
+        <h1 class="header__title">Spelling Names</h1>
+        
+        <!-- Search form -->
+        <form class="search-form">
+            <input type="text" class="search-form__input" placeholder="Search">
+
+            <button type="submit" class="search-form__button">OK</button>
+        </form>
+    </header>
+</div>
+
+
+
+<!-- Sections -->
+<div class="spelling_names_container">
+    <div class="lesson-grid">
+        {% for spelling_names in subtopics %}
+            <div class="lesson-box">
+                <span class="star">☆</span>
+                <a href="{% url 'listen_and_type' topic.slug spelling_names.slug %}">{{spelling_names.title}}</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock spelling_names %}
+    
+
