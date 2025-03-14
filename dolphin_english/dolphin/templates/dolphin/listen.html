@@ -6,17 +6,14 @@
 <div class="topics-container">
     {% for topic in topics %}
         <div class="topic-card">
-            <img src="{% static topic.image %}" alt="{{ topic.title }}">
+            <img src="{{ topic.image.url }}" alt="{{ topic.name }}">
             <div class="topic-info">
-                <a href="{% url topic.link %}" class="topic-title">{{ topic.title }}</a>
+                <a href="{% url 'topic_detail' topic.slug %}" class="topic-title">{{ topic.name }}</a>
                 <p>Levels: {{ topic.levels }}</p>
                 <p>📖 {{ topic.lessons }} lessons</p>
             </div>
         </div>
     {% endfor %}
-    
-
-
 </div>
 
 {% endblock listen %}

@@ -10,9 +10,19 @@
     <link rel="stylesheet" href="{% static 'dolphin/css/listen.css'%}?{% now 'U' %}">
     <link rel="stylesheet" href="{% static 'dolphin/css/register.css'%}?{% now 'U' %}">
     <link rel="stylesheet" href="{% static 'dolphin/css/login.css'%}?{% now 'U' %}">
+    {% comment %} <link rel="stylesheet" href="{% static 'dolphin/css/home.css'%}?{% now 'U' %}"> {% endcomment %}
 
     <!-- Listen View CSS -->
+    <link rel="stylesheet" href="{% static 'dolphin/css/listen/short-stories.css'%}?{% now 'U' %}">
+    <link rel="stylesheet" href="{% static 'dolphin/css/listen/conversations.css'%}?{% now 'U' %}">
+    <link rel="stylesheet" href="{% static 'dolphin/css/listen/toeic.css'%}?{% now 'U' %}">
+    <link rel="stylesheet" href="{% static 'dolphin/css/listen/toefl.css'%}?{% now 'U' %}">
+    <link rel="stylesheet" href="{% static 'dolphin/css/listen/ielts.css'%}?{% now 'U' %}">
     <link rel="stylesheet" href="{% static 'dolphin/css/listen/ipa.css'%}?{% now 'U' %}">
+    <link rel="stylesheet" href="{% static 'dolphin/css/listen/spelling-names.css'%}?{% now 'U' %}">
+    <link rel="stylesheet" href="{% static 'dolphin/css/listen/numbers.css'%}?{% now 'U' %}">
+    <link rel="stylesheet" href="{% static 'dolphin/css/listen/listen_and_type.css'%}?{% now 'U' %}">
+    
 
     <!-- /Listen View CSS -->
 </head>
@@ -39,16 +49,29 @@
         <div class="main-content">
             {% block home %}{% endblock home %}
             {% block listen %}{% endblock listen %}
+            
             <!-- Listen view -->
+            {% block topic_detail %}{% endblock topic_detail %}
+            {% block short-stories %}{% endblock short-stories %}
+            {% block conversations %}{% endblock conversations %}
+            {% block toeic-listening %}{% endblock toeic-listening %}
+            {% block ielts-listening %}{% endblock ielts-listening %}
+            {% block toefl-listening %}{% endblock toefl-listening %}
             {% block ipa %}{% endblock ipa %}
+            {% block numbers %}{% endblock numbers %}
+            {% block spelling_names %}{% endblock spelling_names %}
+            {% block listen_and_type %}{% endblock listen_and_type %}
 
             <!-- /Listen view -->
-            {% block grammar %}{% endblock grammar %}
+            {% block grammar %}
+                {% block backToTop %}   
+                {% endblock backToTop %}
+            {% endblock grammar %}
             {% block login %}{% endblock login %}
             {% block register %}{% endblock register %}
         </div>
     </div>
-
+    
     <footer>
         <div class="footer-content">
             <div class="footer-column">
@@ -83,5 +106,9 @@
             © 2025 Dolphin App. Tất cả các quyền được bảo lưu.
         </div>
     </footer>
+{% block extra_js %}
+<script src="{% static 'dolphin/js/script_sections.js' %}"></script>
+
+{% endblock extra_js %}
 </body>
 </html>

@@ -1,18 +1,3 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  line-height: 1.6; /* giãn cách dòng */
-}
-
 #header {
     background-color: #6db8f2;
     width: 100%;
@@ -205,4 +190,5 @@ th {
         font-size: 18px;
     }
 }
+
 

@@ -7,7 +7,7 @@
 <div class="form-container">
     <h2 class="form-title">Create Your Account</h2>
 
-    <!-- Hiển thị thông báo lỗi -->
+    <!-- Hiển thị lỗi từ form -->
     {% if registerform.errors %}
         <div class="error-message">
             Please correct the errors below.
@@ -84,12 +84,11 @@
 
     <div class="google-btn-container">
         <h3>OR</h3>
-        <a href="{% provider_login_url 'google' %}" class="google-btn">
+        <a href="https://xsutpoaldoomzirjkvzj.supabase.co/auth/v1/authorize?provider=google&prompt=select_account" class="google-btn">
             <img src="{% static 'dolphin/img/google-icon.png' %}" alt="Google logo" class="google-icon">
             Sign up with Google
         </a>
     </div>
-
 
     <p class="login-link">
         Already have an account? <a href="{% url 'login' %}">Login here</a>

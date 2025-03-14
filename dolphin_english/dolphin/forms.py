@@ -8,13 +8,13 @@ class CreateUserForm(UserCreationForm):
     class Meta:
         model = get_user_model()
         fields = ["first_name","last_name","username", "email", "password1", "password2"]
+
         def save(self, commit=True):
             user = super(CreateUserForm, self).save(commit=False)
             user.email = self.cleaned_data['email']
             if commit:
                 user.save()
             return user
-                
 class LoginUserForm(AuthenticationForm):
 
     username = forms.CharField(widget=TextInput(attrs={'class': 'form-control', 'placeholder':'Username'}))
