@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{% static 'dolphin/css/register.css'%}?{% now 'U' %}">
     <link rel="stylesheet" href="{% static 'dolphin/css/login.css'%}?{% now 'U' %}">
     <link rel="stylesheet" href="{% static 'dolphin/css/home.css'%}?{% now 'U' %}">
+    <link rel="stylesheet" href="{% static 'dolphin/css/function.css'%}?{% now 'U' %}">
     {% comment %} <link rel="stylesheet" href="{% static 'dolphin/css/home.css'%}?{% now 'U' %}"> {% endcomment %}
 
     <!-- Listen View CSS -->
@@ -49,6 +50,9 @@
     <div class="page-content">
         <div class="main-content">
             {% block home %}{% endblock home %}
+            {% block function %}{% endblock function %}
+    
+            
             {% block listen %}{% endblock listen %}
             
             <!-- Listen view -->

@@ -10,7 +10,7 @@ urlpatterns = [
     path("login/", views.login_view,name='login'),
     path("register/", views.register_view,name='register'),
     path("logout/", views.logout_view,name='logout'),
-
+    path("function/", views.function,name='function'),
     # Listen Views
     path('listen/<slug:topic_slug>/', views.topic_detail, name='topic_detail'),
     # path("listen/short-stories", views.listen_view_short_stories,name='short-stories'),
