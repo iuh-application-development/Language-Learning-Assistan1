@@ -31,3 +31,8 @@ Thumbs.db
 .vscode/
 .idea/
 *.iml
+
+# Loại bỏ file của môi trường ảo
+*.pyc
+*.pyo
+*.pyd
