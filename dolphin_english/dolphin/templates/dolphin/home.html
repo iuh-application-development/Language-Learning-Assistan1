@@ -1,7 +1,97 @@
 {% extends "dolphin/base.html" %}
 {% load static %}
 
+{% comment %} {% block home %} {% endcomment %}
 {% block home %}
+<div class="home-container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Học tiếng Anh miễn phí, hiệu quả và vui nhộn!</h1>
+                <p class="subtitle">The most popular way to learn English in Vietnam</p>
+                <div class="hero-buttons">
+                    <a href="{% url 'register' %}" class="btn-primary">BẮT ĐẦU NGAY</a>
+                    <a href="{% url 'login' %}" class="btn-secondary">TÔI ĐÃ CÓ TÀI KHOẢN</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="{% static 'dolphin/img/back.png' %}" alt="Dolphin">
+            </div>
+        </div>
+    </section>
 
-<h1>Welcome to Dolphin English</h1>
+    <!-- Why Choose Dolphin Section -->
+    <section class="why-choose">
+        <h2>Tại sao chọn Dolphin?</h2>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="{% static 'dolphin/img/10212480.png' %}" alt="Game icon">
+                </div>
+                <h3>Học như chơi game</h3>
+                <p>Bài học ngắn gọn, thú vị giúp bạn duy trì động lực học tập.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="{% static 'dolphin/img/target.png' %}" alt="Target icon">
+                </div>
+                <h3>Hiệu quả đã được chứng minh</h3>
+                <p>Phương pháp khoa học giúp bạn tiến bộ nhanh chóng.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="{% static 'dolphin/img/headphone.png' %}" alt="Headphones icon">
+                </div>
+                <h3>Luyện nghe thực tế</h3>
+                <p>Nội dung đa dạng từ hội thoại đến bài thi TOEIC, IELTS.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="{% static 'dolphin/img/gramma.png' %}" alt="Grammar icon">
+                </div>
+                <h3>Ngữ pháp dễ hiểu</h3>
+                <p>Học ngữ pháp tiếng Anh một cách đơn giản và hiệu quả.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>Học viên nói gì về Dolphin?</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial">
+                <div class="quote">"Tôi đã cải thiện điểm TOEIC từ 450 lên 750 chỉ sau 3 tháng học với Dolphin!"</div>
+                <div class="testimonial-author">
+                    <img src="{% static 'dolphin/img/avatars/student1.jpg' %}" alt="Student avatar">
+                    <p>Nguyễn Văn A<span>Sinh viên ĐH Bách Khoa</span></p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="quote">"Giao diện thân thiện và bài tập thú vị giúp tôi học tiếng Anh mỗi ngày mà không cảm thấy nhàm chán."</div>
+                <div class="testimonial-author">
+                    <img src="{% static 'dolphin/img/avatars/student2.jpg' %}" alt="Student avatar">
+                    <p>Trần Thị B<span>Nhân viên văn phòng</span></p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="quote">"Tôi đã tự tin giao tiếp với đối tác nước ngoài sau khóa học Tiếng Anh giao tiếp của Dolphin."</div>
+                <div class="testimonial-author">
+                    <img src="{% static 'dolphin/img/avatars/student3.jpg' %}" alt="Student avatar">
+                    <p>Lê Văn C<span>Chuyên viên marketing</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Bắt đầu hành trình học tiếng Anh ngay hôm nay!</h2>
+            <p>Tham gia cùng hơn 500,000 học viên đang sử dụng Dolphin</p>
+            <a href="{% url 'register' %}" class="btn-large">ĐĂNG KÝ MIỄN PHÍ</a>
+        </div>
+    </section>
+</div>
+{% comment %} {% endblock home %} {% endcomment %}
 {% endblock home %}
