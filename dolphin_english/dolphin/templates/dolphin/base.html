@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dolphin</title>
     <link rel="stylesheet" href="{% static 'dolphin/css/base.css'%}?{% now 'U' %}">
-    {% block extra_css %}
-    {% endblock extra_css %}
-    
-    {% comment %} <link rel="stylesheet" href="{% static 'dolphin/css/home.css'%}?{% now 'U' %}"> {% endcomment %}
 
-    <!-- Listen View CSS -->
-    <!-- /Listen View CSS -->
+    {% block extra_css %} 
+    <!-- All file css in this block -->
+    {% endblock extra_css %}
+
 </head>
 <body>
     <header>
@@ -52,6 +50,7 @@
                     {% endfor %}
                 </div>
             {% endif %}
+
             {% block content %}
                 {% block backToTop %}   
                 {% endblock backToTop %}

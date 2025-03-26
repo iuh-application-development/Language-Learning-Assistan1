@@ -1,5 +1,8 @@
 # Loại bỏ thư mục môi trường ảo (virtual environment)
 venv/
+../venv/
+.venv/
+.venv
 env/
 .virtualenv/
 

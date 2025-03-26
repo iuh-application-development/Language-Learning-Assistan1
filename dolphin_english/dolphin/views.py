@@ -9,6 +9,12 @@ from django.contrib import messages
 def home(request):
     return render(request, 'dolphin/home.html')
 
+def function(request):
+    return render(request, 'dolphin/function.html')
+
+# def home_view(request):
+#     return render(request, 'dolphin/home.html')
+
 def gramma_view(request):
     return render(request, 'dolphin/grammar.html')
 
@@ -93,3 +99,4 @@ def listen_and_type(request, topic_slug, subtopic_slug):
         "subtopic": subtopic,
         "exercises": exercises
     })   
+
