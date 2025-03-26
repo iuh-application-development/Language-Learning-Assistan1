@@ -1,10 +1,21 @@
-.exercise-box {
+.breadcrumb {
+    padding: 20px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+.box-listen {
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    width: 1200px;
+    height: 400px;
     margin: 20px auto;
+}
+.exercise-box {
+    padding: 20px;
+    width: 500px;
 }
 
 .exercise-box h2 {
@@ -90,4 +101,95 @@
 
 .skipBtn:hover {
     background-color: #bbb;
+}
+
+.nextBtnHidden {
+    background-color: #198754;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.nextBtnHidden:hover {
+    background-color: #146c43;
+}
+
+.replayBtn {
+    cursor: pointer;
+}
+
+/* Dropdown Button Styles */
+.dropdown {
+    width: 500px;         /* Giữ chiều rộng vừa với nội dung */         /* Tạo khoảng cách với khối trên */
+    margin-left: 9%;   
+}
+
+.dropdown-btn {
+    background-color: white; /* Màu nền của nút dropdown */
+    color: #333;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%; /* Nút dropdown chiếm toàn bộ chiều rộng */
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+    box-sizing: border-box;
+}
+
+.dropdown-btn:hover {
+    background-color: #a3c8fc; /* Màu nền khi hover */
+}
+
+/* Arrow Styles */
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 8px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap;
+    width: 100%; /* Đảm bảo dropdown content chiếm hết chiều rộng */
+    max-width: 100%; /* Giới hạn chiều rộng không vượt quá 100% */
+    box-sizing: border-box; /* Đảm bảo padding và border không vượt quá chiều rộng */
+    overflow-y: auto; /* Thêm thanh cuộn nếu nội dung dài */
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.dropdown-content pre {
+    text-align: left; /* Căn trái nội dung bên trong */
+    margin: 0; /* Loại bỏ margin mặc định */
+    padding: 0; /* Loại bỏ padding mặc định */
+}
+
+/* Show the dropdown content when the button is clicked */
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Rotate the arrow when the dropdown is active */
+.dropdown.active .arrow {
+    transform: rotate(180deg);
 }

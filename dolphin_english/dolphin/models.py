@@ -1,5 +1,9 @@
 from django.db import models
 from django.utils.text import slugify
+from django.contrib.auth.models import AbstractUser
+import uuid
+from django.utils.timezone import now
+    
 
 class Topic(models.Model):
     name = models.CharField(max_length=100, unique=True)
@@ -30,7 +34,7 @@ class Topic(models.Model):
 class Section(models.Model):
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE, related_name='sections')
     title = models.CharField(max_length=255)
-    order = models.PositiveIntegerField(default=1)
+    position = models.PositiveIntegerField(default=1)
 
     def __str__(self):
         return self.title
@@ -38,6 +42,7 @@ class Section(models.Model):
 
 class SubTopic(models.Model):
     section = models.ForeignKey(Section, on_delete=models.CASCADE, related_name='subtopics', null=True, blank=True)
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE, related_name="topics", null=True, blank=True)
     title = models.CharField(max_length=255)
     level = models.CharField(
         max_length=50,
@@ -46,6 +51,7 @@ class SubTopic(models.Model):
     )
     num_part = models.IntegerField(default=0)
     slug = models.SlugField(unique=True, blank=True)
+    full_textkey = models.TextField(blank=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -58,9 +64,9 @@ class SubTopic(models.Model):
 
 class AudioExercise(models.Model):
     subtopic = models.ForeignKey(SubTopic, on_delete=models.CASCADE, related_name='exercises')
-    audio = models.URLField()
+    audioSrc = models.URLField()
     correct_text = models.TextField()
-    order = models.PositiveIntegerField(default=1)
+    position = models.PositiveIntegerField(default=1)
 
     def __str__(self):
         return self.subtopic.title

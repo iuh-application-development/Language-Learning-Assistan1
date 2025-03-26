@@ -49,6 +49,88 @@ header a {
   color: rgb(8, 69, 199);
 }
 
+/* Style cho dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style cho nút dropdown */
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  padding: 10px;
+}
+
+/* Style cho danh sách dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 200px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Style cho từng link bên trong dropdown */
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background: #f0f0f0;
+}
+
+/* Hiển thị dropdown khi hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.messages-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.alert {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.alert-error {
+  background-color: #ffdddd;
+  color: #d8000c;
+  border: 1px solid #d8000c;
+}
+
+.alert-success {
+  background-color: #ddffdd;
+  color: #4f8a10;
+  border: 1px solid #4f8a10;
+}
+
+
 /* 🔹 Đảm bảo nội dung không bị header che khuất */
 .page-content {
   display: flex;
@@ -67,6 +149,7 @@ footer {
   padding: 40px 20px;
   font-family: Arial, sans-serif;
 }
+
 
 .footer-content {
   display: flex;

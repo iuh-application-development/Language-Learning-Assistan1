@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google', 
+    'rest_framework',
 ]
 
 
@@ -73,17 +74,14 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "/"  # Sau khi đăng nhập thành công
 LOGOUT_REDIRECT_URL = "/"
-
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_UNIQUE_EMAIL = True
 SOCIALACCOUNT_LOGIN_ON_GET = True
-SOCIALACCOUNT_AUTO_SIGNUP = True  # Tự động đăng ký tài khoản mới
-ACCOUNT_SIGNUP_REDIRECT_URL = "/"  # Chuyển hướng về home nếu phải đăng ký
-ACCOUNT_EMAIL_REQUIRED = True  # Bắt buộc có email
-ACCOUNT_USERNAME_REQUIRED = False  # Không yêu cầu username
-ACCOUNT_AUTHENTICATION_METHOD = "email"  # Xác thực bằng email thay vì username
-ACCOUNT_UNIQUE_EMAIL = True  # Email phải là duy nhất
-
+SOCIALACCOUNT_AUTO_SIGNUP = True
+ACCOUNT_SIGNUP_REDIRECT_URL = "/"
 
 
 ROOT_URLCONF = "ptud.urls"

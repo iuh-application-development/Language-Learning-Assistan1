@@ -2,8 +2,11 @@
 {% load static %}
 {% load socialaccount %}
 
-{% block register %}
+{% block content %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dolphin/css/register.css'%}?{% now 'U' %}">
+{% endblock extra_css %}
 <div class="form-container">
     <h2 class="form-title">Create Your Account</h2>
 
@@ -95,4 +98,4 @@
     </p>
 </div>
 
-{% endblock register %}
+{% endblock content %}

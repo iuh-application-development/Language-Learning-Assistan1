@@ -2,42 +2,46 @@
 {% load static %}
 {% load socialaccount %}
 
-{% block login %}
-
+{% block content %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dolphin/css/login.css'%}?{% now 'U' %}">
+{% endblock extra_css %}
 <div class="form-container">
     <h2 class="form-title">Login</h2>
-    {% if loginform.errors %}
-        <div class="error-message">
-            Invalid username or password. Please try again
-        </div>
-    {% endif %}
-    <form method="POST" autocomplete="off">
+    
+    <form method="post" novalidate>
         {% csrf_token %}
-        <div class="input-group">
-            <label for="{{loginform.username.id_for_label}}">Username</label>
-            {{loginform.username}}
-        </div>
-
-        <div class="input-group">
-            <label for="{{loginform.password.id_for_label}}">Password</label>
-            {{loginform.password}}
-        </div>
+        {% for field in form %}
+            <div class="input-group">
+                {{ field.label_tag }}
+                {{ field }}
+                {% if field.errors %}
+                    <ul class="errorlist">
+                        {% for error in field.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        {% endfor %}
 
         <button type="submit" class="btn-submit">Login</button>
     </form>
 
-    <br>
+    <div class="divider">
+        <span>OR</span>
+    </div>
 
     <div class="google-btn-container">
-        <h3>OR</h3>
-        <a href="https://xsutpoaldoomzirjkvzj.supabase.co/auth/v1/authorize?provider=google" class="google-btn">
+        <a href="{% provider_login_url 'google' %}" class="google-btn">
             <img src="{% static 'dolphin/img/google-icon.png' %}" alt="Google logo" class="google-icon">
             Login with Google
         </a>
     </div>
+
     <p class="signup-link">
         Don't have an account? <a href="{% url 'register' %}">Sign up here</a>
     </p>
 </div>
 
-{% endblock login %}
+{% endblock content %}

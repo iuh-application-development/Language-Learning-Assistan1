@@ -1,12 +1,12 @@
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from django import forms
 from django.forms.widgets import TextInput, PasswordInput
 
 class CreateUserForm(UserCreationForm):
     email = forms.EmailField(help_text="A valid email address, please.", required=True)
     class Meta:
-        model = get_user_model()
+        model = User
         fields = ["first_name","last_name","username", "email", "password1", "password2"]
 
         def save(self, commit=True):
@@ -15,8 +15,8 @@ class CreateUserForm(UserCreationForm):
             if commit:
                 user.save()
             return user
-class LoginUserForm(AuthenticationForm):
+class LoginUserForm(forms.Form):
 
-    username = forms.CharField(widget=TextInput(attrs={'class': 'form-control', 'placeholder':'Username'}))
-    password = forms.CharField(widget=PasswordInput(attrs={'class': 'form-control', 'placeholder':'Password'}))
+    username = forms.CharField(max_length=255,widget=TextInput(attrs={'class': 'form-control', 'placeholder':'Username'}))
+    password = forms.CharField(max_length=255,widget=PasswordInput(attrs={'class': 'form-control', 'placeholder':'Password'}))
     

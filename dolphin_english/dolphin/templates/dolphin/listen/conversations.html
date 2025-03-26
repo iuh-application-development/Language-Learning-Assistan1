@@ -1,7 +1,9 @@
 {% extends "dolphin/base.html" %}
 {% load static %}
-{% block conversations %}
-
+{% block content %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dolphin/css/listen/subtopic.css'%}?{% now 'U' %}">
+{% endblock extra_css %}
 <div class="search-container">
     <!-- Breadcrumb navigation -->
     <nav class="breadcrumb">
@@ -33,11 +35,11 @@
     </header>
 </div>
 
-<div class="conversations-container">
+<div class="container">
     {% for section in sections %}
         <div class="section">
-            <input type="checkbox" id="section{{section.order}}" class="section__toggle">
-            <label for="section{{section.order}}" class="section__header">
+            <input type="checkbox" id="section{{section.position}}" class="section__toggle">
+            <label for="section{{section.position}}" class="section__header">
                 <h2 class="section__title">{{section.title}} <span class="section__count">({{section.subtopics.count}} lessons)</span></h2>
                 <span class="section__arrow"></span>
             </label>
@@ -55,8 +57,6 @@
         </div>
     {% endfor %}
 </div>
-<script src="{% static 'dolphin/js/script_sections.js' %}"></script>
-
-{% endblock conversations %}
+{% endblock content %}
     
 
