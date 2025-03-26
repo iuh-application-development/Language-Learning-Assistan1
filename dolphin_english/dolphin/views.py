@@ -9,9 +9,6 @@ from django.contrib import messages
 def home(request):
     return render(request, 'dolphin/home.html')
 
-def function(request):
-    return render(request, 'dolphin/function.html')
-
 # def home_view(request):
 #     return render(request, 'dolphin/home.html')
 
