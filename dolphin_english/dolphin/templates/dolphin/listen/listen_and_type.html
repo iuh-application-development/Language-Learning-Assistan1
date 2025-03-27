@@ -46,6 +46,10 @@
         <span class="arrow"></span>
     </button>
     <div class="dropdown-content">
+        <audio controls class="playerAudio">
+            <source src="{{ subtopic.full_audioSrc }}" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
         <pre>{{subtopic.full_textkey}}</pre>
     </div>
 </div>

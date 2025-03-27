@@ -52,7 +52,7 @@ class SubTopic(models.Model):
     num_part = models.IntegerField(default=0)
     slug = models.SlugField(unique=True, blank=True)
     full_textkey = models.TextField(blank=True)
-
+    full_audioSrc = models.URLField()
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.title)
