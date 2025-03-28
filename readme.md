@@ -117,7 +117,7 @@ Here is the system’s database schema:
 
 ### 🎥 Database Structure & Diagram
 
-![DB](media/image/img_readme/db.gif)
+![DB](dolphin_english/media/image/img_readme/db.gif)
 
 
 ---
