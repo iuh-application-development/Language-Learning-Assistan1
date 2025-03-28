@@ -132,109 +132,132 @@ p {
     max-height: 400px;
 }
 
-/* Why Choose Section */
+/* Why Choose Section Improved */
 .why-choose {
     text-align: center;
-    padding: 60px 0;
+    padding: 60px 20px;
+    background-color: #f9fdff;
+    border-radius: var(--border-radius);
 }
 
 .why-choose h2 {
     font-size: 36px;
     color: var(--primary-color);
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    font-weight: 600;
 }
 
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    justify-content: center;
 }
 
 .feature-card {
     background-color: var(--white);
-    padding: 30px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
 }
 
 .feature-icon {
-    margin-bottom: 20px;
-    height: 70px;
+    margin-bottom: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .feature-icon img {
-    height: 60px;
+    height: 65px;
     width: auto;
 }
 
 .feature-card h3 {
     font-size: 20px;
     color: var(--text-color);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .feature-card p {
-    color: #666;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-/* Testimonials Section */
+/* Individual background colors */
+.feature-card:nth-child(1) { background-color: #e3f2fd; }
+.feature-card:nth-child(2) { background-color: #fce4ec; }
+.feature-card:nth-child(3) { background-color: #e8f5e9; }
+.feature-card:nth-child(4) { background-color: #fff3e0; }
+
+
+/* Testimonials Section Improved */
 .testimonials {
-    padding: 60px 0;
-    background-color: var(--light-gray);
-    border-radius: var(--border-radius);
+    padding: 70px 20px;
+    background-color: #f8fbff;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
 }
 
 .testimonials h2 {
     font-size: 36px;
     color: var(--primary-color);
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    font-weight: 600;
 }
 
 .testimonial-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 0;
 }
 
 .testimonial {
-    background-color: var(--white);
-    border-radius: var(--border-radius);
-    padding: 30px;
-    box-shadow: var(--shadow);
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
 .quote {
-    font-size: 18px;
+    font-size: 17px;
     color: var(--text-color);
     font-style: italic;
     margin-bottom: 20px;
     position: relative;
-    padding-left: 25px;
+    padding-left: 30px;
+    line-height: 1.5;
 }
 
 .quote::before {
-    content: '"';
+    content: '“';
     font-size: 40px;
     color: var(--primary-color);
     position: absolute;
     left: 0;
-    top: -10px;
+    top: -8px;
 }
 
 .testimonial-author {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 }
 
 .testimonial-author img {
@@ -242,11 +265,13 @@ p {
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
+    border: 2px solid var(--primary-color);
 }
 
 .testimonial-author p {
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-color);
+    margin: 0;
     display: flex;
     flex-direction: column;
 }
@@ -254,8 +279,9 @@ p {
 .testimonial-author span {
     font-weight: 400;
     font-size: 14px;
-    color: #666;
+    color: #777;
 }
+
 
 /* CTA Section */
 .cta {
