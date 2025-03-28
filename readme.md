@@ -47,20 +47,20 @@ python manage.py runserver  # you can change the port if needed
 ## 2. 🧠 Features
 
 ### 🎧 Listening  
-![alt text](media/image/img_readme/image.png)
+![alt text](dolphin_english/media/image/img_readme/image.png)
 - Listening exercises from A1 to C2 with answer checking functionality  
 - Beginner-friendly and intuitive interface
 
 ### 🧾 Grammar  
-![alt text](media/image/img_readme/image-1.png) 
+![alt text](dolphin_english/media/image/img_readme/image-1.png) 
 - Covers essential to advanced grammar: 12 core grammar topics
 
 ### 🔐 Login  
-![alt text](media/image/img_readme/image-2.png)  
+![alt text](dolphin_english/media/image/img_readme/image-2.png)  
 - User authentication integrated via Django Allauth
 
 ### 📝 Register  
-![alt text](media/image/img_readme/image-3.png)
+![alt text](dolphin_english/media/image/img_readme/image-3.png)
 - Users can register to track their learning progress  
 - Progress history, scores, and level are stored and displayed
 
@@ -85,7 +85,7 @@ The system uses a relational database model, designed to fully support English l
 
 Here is the system’s database schema:
 
-![alt text](media/image/img_readme/db.png) 
+![alt text](dolphin_english/media/image/img_readme/db.png) 
 
 ### 📘 Main Tables Description:
 
