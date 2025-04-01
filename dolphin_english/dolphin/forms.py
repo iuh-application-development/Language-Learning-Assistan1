@@ -7,14 +7,14 @@ class CreateUserForm(UserCreationForm):
     email = forms.EmailField(help_text="A valid email address, please.", required=True)
     class Meta:
         model = User
-        fields = ["first_name","last_name","username", "email", "password1", "password2"]
+        fields = ["username", "email", "password1", "password2"]
 
-        def save(self, commit=True):
-            user = super(CreateUserForm, self).save(commit=False)
-            user.email = self.cleaned_data['email']
-            if commit:
-                user.save()
-            return user
+    def save(self, commit=True):
+        user = super(CreateUserForm, self).save(commit=False)
+        user.email = self.cleaned_data['email']
+        if commit:
+            user.save()
+        return user
 class LoginUserForm(forms.Form):
 
     username = forms.CharField(max_length=255,widget=TextInput(attrs={'class': 'form-control', 'placeholder':'Username'}))

@@ -21,26 +21,6 @@
         {% csrf_token %}
 
         <div class="input-group">
-            <label for="{{ registerform.first_name.id_for_label }}">First Name</label>
-            {{ registerform.first_name }}
-            {% if registerform.first_name.errors %}
-                <div class="error-message">
-                    {{ registerform.first_name.errors|striptags }}
-                </div>
-            {% endif %}
-        </div>
-
-        <div class="input-group">
-            <label for="{{ registerform.last_name.id_for_label }}">Last Name</label>
-            {{ registerform.last_name }}
-            {% if registerform.last_name.errors %}
-                <div class="error-message">
-                    {{ registerform.last_name.errors|striptags }}
-                </div>
-            {% endif %}
-        </div>
-
-        <div class="input-group">
             <label for="{{ registerform.username.id_for_label }}">Username</label>
             {{ registerform.username }}
             {% if registerform.username.errors %}
@@ -87,7 +67,7 @@
 
     <div class="google-btn-container">
         <h3>OR</h3>
-        <a href="https://xsutpoaldoomzirjkvzj.supabase.co/auth/v1/authorize?provider=google&prompt=select_account" class="google-btn">
+        <a href="{% provider_login_url 'google' %}" class="google-btn">
             <img src="{% static 'dolphin/img/google-icon.png' %}" alt="Google logo" class="google-icon">
             Sign up with Google
         </a>

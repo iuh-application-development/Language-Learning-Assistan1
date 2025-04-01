@@ -445,13 +445,14 @@ p {
 .features-options {
     display: flex;
     flex-direction: column;
+    justify-content: left;
     gap: 20px;
     margin-bottom: 30px;
 }
 
 .feature-option {
     display: flex;
-    align-items: center;
+    justify-content: left;
     padding: 20px;
     border-radius: 8px;
     background-color: #f9f9f9;
@@ -483,6 +484,7 @@ p {
 
 .feature-details {
     flex: 1;
+    text-align: left;
 }
 
 .feature-details h3 {

@@ -52,7 +52,31 @@ document.addEventListener("DOMContentLoaded", function () {
             .replace(/\s+/g, " ") // Chuẩn hóa khoảng trắng (loại bỏ khoảng trắng thừa)
             .trim(); // Xóa khoảng trắng đầu/cuối
     }
-
+    
+    function correctPartialAnswer(userAnswer, correctAnswer) {
+        let userWords = userAnswer.split(' ');
+        let correctWords = correctAnswer.split(' ');
+        let fixedWords = [];
+    
+        for (let i = 0; i < correctWords.length; i++) {
+            let correctWord = correctWords[i];
+            let userWord = userWords[i] || '';
+            let fixedWord = '';
+    
+            for (let j = 0; j < userWord.length; j++) {
+                if (userWord[j].toLowerCase() === correctWord[j]?.toLowerCase()) {
+                    fixedWord += correctWord[j];  // Giữ nguyên ký tự chuẩn
+                } else {
+                    break;  // Dừng nếu sai
+                }
+            }
+    
+            fixedWords.push(fixedWord);
+        }
+    
+        return fixedWords.join(' ').trim();
+    }
+    
     // ✅ Hàm so sánh chính tả và hiển thị từ đúng với dấu '*'
     function checkSpelling(userAnswer, correctAnswer) {
         let result = ''; // Chuỗi kết quả
@@ -111,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (event.target.classList.contains("checkBtn")) {
             let currentExercise = event.target.closest(".exercise-box");
             let correctAnswer = currentExercise.dataset.correct;
-    
+            
             if (!correctAnswer) {
                 return; // Nếu không có đáp án đúng, không làm gì cả
             }
@@ -127,7 +151,13 @@ document.addEventListener("DOMContentLoaded", function () {
     
             let feedbackElement = currentExercise.querySelector(".feedback");
             if (userAnswer === correctAnswer) {
-                feedbackElement.innerHTML = "<span style='color: green;'>✅ Correct!</span>"; // Đáp án đúng
+                let originalCorrect = currentExercise.dataset.correct;
+                userInputElement.value = originalCorrect;
+                userInputElement.style.color = "inherit";
+                userInputElement.style.textDecoration = "none";
+                userInputElement.classList.remove("input-highlight");
+
+                feedbackElement.innerHTML = `<div style="color: green; font-weight: bold;">✅ You are correct!</div>`;
     
                 // Hiển thị nút "Next" và "Replay"
                 let nextBtn = currentExercise.querySelector(".nextBtnHidden");
@@ -144,7 +174,47 @@ document.addEventListener("DOMContentLoaded", function () {
     
             } else {
                 let feedback = checkSpelling(userAnswer, correctAnswer);
-                feedbackElement.innerHTML = "<span style='font-size: 20px;'>❌ Incorrect </span><br><span>" + feedback + "</span>"; // Đáp án sai
+                feedbackElement.innerHTML = "<span style='font-size: 20px;'>❌ Incorrect </span><br><span>" + feedback + "</span>";
+            
+                let fixedInput = correctPartialAnswer(userAnswer, currentExercise.dataset.correct);
+                userInputElement.value = fixedInput;
+                userInputElement.style.color = "black";
+                userInputElement.style.textDecoration = "underline dashed orange";
+                userInputElement.style.textDecorationThickness = "2px";
+            
+                let correctWords = currentExercise.dataset.correct.split(' ');
+                let fixedWords = fixedInput.split(' ');
+                let feedbackHTML = '';
+            
+                for (let i = 0; i < correctWords.length; i++) {
+                    if (fixedWords[i]) {
+                        feedbackHTML += `<span class="correct-word">${correctWords[i]}</span> `;
+                    } else {
+                        feedbackHTML += '*'.repeat(correctWords[i].length) + ' ';
+                    }
+                }
+            
+                feedbackElement.innerHTML = `
+                    <div style='font-size: 20px; color: orange;'>⚠️ Incorrect</div>
+                    <div style='margin-top: 8px;'>${feedbackHTML.trim()}</div>
+                `;
+            }
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            const activeElement = document.activeElement;
+    
+            if (activeElement && activeElement.classList.contains("userInput")) {
+                event.preventDefault(); // ❌ Không cho xuống dòng
+    
+                const exerciseBox = activeElement.closest(".exercise-box");
+                const checkBtn = exerciseBox.querySelector(".checkBtn");
+    
+                if (checkBtn && checkBtn.style.display !== "none") {
+                    checkBtn.click(); // ✅ Gọi lại logic kiểm tra
+                }
             }
         }
     });

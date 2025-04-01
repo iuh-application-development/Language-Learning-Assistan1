@@ -5,53 +5,56 @@
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'dolphin/css/listen/listen_and_type.css'%}?{% now 'U' %}">
 {% endblock extra_css %}
-<div class="search-container">
-    <nav class="breadcrumb">
-        <a href="{% url 'listen' %}" class="breadcrumb__link">All topics</a>
-        <span class="breadcrumb__separator">/</span>
-        <a href="{% url 'topic_detail' topic.slug %}" class="breadcrumb__link">{{topic.name}}</a>
-        <span class="breadcrumb__separator">/</span>
-        <span class="breadcrumb__current">{{subtopic.title}}</span>
-    </nav>
-</div>
-<div class="box-listen">
-{% for exercise in exercises %}
-    <div class="exercise-box" data-order="{{ exercise.position }}" data-correct="{{ exercise.correct_text }}">
-        <h2>{{subtopic.title}} <span class="vocab-level">Vocab level: {{subtopic.level}}</span></h2>
-            <div class="navigation">
-                <button class="preBtn">←</button>
-                <span class="exercise-count">{{exercise.position}} / {{exercises | length}}</span>
-                <button class="nextBtn">→</button>
-            </div>
-            <audio controls class="playerAudio">
-                <source src="{{ exercise.audioSrc }}" type="audio/mpeg">
-                Your browser does not support the audio tag.
-            </audio>
-            <input type="text" class="userInput" placeholder="Type what you hear...">
-            <div class="feedback"></div>
-
-            <div class="exercise-buttons">
-                <button class="checkBtn">Check</button>
-                <button class="skipBtn">Skip</button>
-                
-                <button class="nextBtnHidden" style="display: none;">Next</button>
-                <button class="replayBtn" style="display: none;">Replay</button>
-            </div>
+<div class="listen-container">
+    <div class="search-container">
+        <nav class="breadcrumb">
+            <a href="{% url 'listen' %}" class="breadcrumb__link">All topics</a>
+            <span class="breadcrumb__separator">/</span>
+            <a href="{% url 'topic_detail' topic.slug %}" class="breadcrumb__link">{{topic.name}}</a>
+            <span class="breadcrumb__separator">/</span>
+            <span class="breadcrumb__current">{{subtopic.title}}</span>
+        </nav>
     </div>
-{% endfor %}
-</div>
-<div class="dropdown">
-    <button class="dropdown-btn">
-        Full Audio & Transcript
-        <span class="arrow"></span>
-    </button>
-    <div class="dropdown-content">
-        <audio controls class="playerAudio">
-            <source src="{{ subtopic.full_audioSrc }}" type="audio/mpeg">
-            Your browser does not support the audio tag.
-        </audio>
-        <pre>{{subtopic.full_textkey}}</pre>
+    <div class="content-wrapper">
+        <div class="box-listen">
+        {% for exercise in exercises %}
+            <div class="exercise-box" data-order="{{ exercise.position }}" data-correct="{{ exercise.correct_text }}">
+                <h2>{{subtopic.title}} <span class="vocab-level">Vocab level: {{subtopic.level}}</span></h2>
+                    <div class="navigation">
+                        <button class="preBtn">←</button>
+                        <span class="exercise-count">{{exercise.position}} / {{exercises | length}}</span>
+                        <button class="nextBtn">→</button>
+                    </div>
+                    <audio controls class="playerAudio">
+                        <source src="{{ exercise.audioSrc }}" type="audio/mpeg">
+                        Your browser does not support the audio tag.
+                    </audio>
+                    <textarea class="userInput" placeholder="Type what you hear..." autocomplete="off" autocorrect="off" spellcheck="false"></textarea>
+                    <div class="feedback"></div>
+
+                    <div class="exercise-buttons">
+                        <button class="checkBtn">Check</button>
+                        <button class="skipBtn">Skip</button>
+                        
+                        <button class="nextBtnHidden" style="display: none;">Next</button>
+                        <button class="replayBtn" style="display: none;">Replay</button>
+                    </div>
+            </div>
+        {% endfor %}
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-btn">
+                Full Audio & Transcript
+                <span class="arrow"></span>
+            </button>
+            <div class="dropdown-content">
+                <audio controls class="playerAudio">
+                    <source src="{{ subtopic.full_audioSrc }}" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+                <pre>{{subtopic.full_textkey}}</pre>
+            </div>
+        </div>
     </div>
 </div>
-
 {% endblock content %}
