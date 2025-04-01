@@ -1,36 +1,40 @@
-# Loại bỏ thư mục môi trường ảo (virtual environment)
+# 🐍 Python virtual environment
 venv/
-../venv/
 .venv/
-.venv
 env/
 .virtualenv/
+ENV/
+env.bak/
 
-# Loại bỏ thư mục cache của Python
+../venv/
+
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
 
-# Loại bỏ file log
-*.log
+.pytest_cache/
+.coverage
+htmlcov/
 
-# Loại bỏ file database SQLite (nếu có)
-db.sqlite3
-*.sqlite3
-
-# Loại bỏ file cài đặt môi trường (tạm thời)
 .env
 *.env
 
-# Loại bỏ các file/ thư mục tạo bởi hệ điều hành
+db.sqlite3
+*.sqlite3
+
+*.log
+
 .DS_Store
 Thumbs.db
 
-# Loại bỏ thư mục migrations (nếu muốn, nhưng không khuyến khích)
-# */migrations/
-
-# Loại bỏ file của editor (VS Code, PyCharm)
 .vscode/
 .idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
 *.iml
+
+build/
+dist/
+*.egg-info/
