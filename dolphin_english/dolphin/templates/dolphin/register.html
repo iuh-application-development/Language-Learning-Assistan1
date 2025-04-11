@@ -21,17 +21,17 @@
         {% csrf_token %}
 
         <div class="input-group">
-            <label for="{{ registerform.username.id_for_label }}">Username</label>
-            {{ registerform.username }}
-            {% if registerform.username.errors %}
+            <div style="font-weight: bold; padding-bottom: 3px;">Nickname</div>
+            {{ registerform.nickname }}
+            {% if registerform.nickname.errors %}
                 <div class="error-message">
-                    {{ registerform.username.errors|striptags }}
+                    {{ registerform.nickname.errors|striptags }}
                 </div>
             {% endif %}
         </div>
 
         <div class="input-group">
-            <label for="{{ registerform.email.id_for_label }}">Email</label>
+            <div style="font-weight: bold; padding-bottom: 3px;">Email</div>
             {{ registerform.email }}
             {% if registerform.email.errors %}
                 <div class="error-message">
@@ -41,7 +41,7 @@
         </div>
 
         <div class="input-group">
-            <label for="{{ registerform.password1.id_for_label }}">Password</label>
+            <div style="font-weight: bold; padding-bottom: 3px;">Password</div>
             {{ registerform.password1 }}
             {% if registerform.password1.errors %}
                 <div class="error-message">
@@ -51,7 +51,7 @@
         </div>
 
         <div class="input-group">
-            <label for="{{ registerform.password2.id_for_label }}">Confirm Password</label>
+            <div style="font-weight: bold; padding-bottom: 3px;">Confirm Password</div>
             {{ registerform.password2 }}
             {% if registerform.password2.errors %}
                 <div class="error-message">
@@ -63,10 +63,11 @@
         <button type="submit" class="btn-submit">Register</button>
     </form>
     
-    <br>
+    <div class="divider">
+        <span>OR</span>
+    </div>
 
     <div class="google-btn-container">
-        <h3>OR</h3>
         <a href="{% provider_login_url 'google' %}" class="google-btn">
             <img src="{% static 'dolphin/img/google-icon.png' %}" alt="Google logo" class="google-icon">
             Sign up with Google

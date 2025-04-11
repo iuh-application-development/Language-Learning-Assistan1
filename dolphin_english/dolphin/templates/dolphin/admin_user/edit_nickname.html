@@ -1,0 +1,20 @@
+{% extends "dolphin/admin_user/admin_dashboard.html" %}
+{% load static %}
+
+{% block content %}
+{% block extra_css %}
+<link rel="stylesheet"href="{% static 'dolphin/css/edit_nickname.css'%}?{% now 'U' %}"/>
+{% endblock extra_css %}
+
+<h1>Change display name</h1>
+<h3>Edit Nickname</h3>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit</button>
+</form>
+
+
+{% endblock content %}
+

@@ -1,0 +1,35 @@
+{% extends "dolphin/admin_user/admin_dashboard.html" %}
+{% load static %}
+{% block navbar %}
+<div class="navbar">
+    <a href="{% url 'admin_dashboard' %}">Home</a>
+    <span>></span>
+    <a href="{% url 'topics' %}">Topics</a>
+</div>
+{% endblock navbar %}
+
+{% block topics %}
+<div class="list_topics">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>LEVEL</th>
+                <th>LESSONS</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for topic in topics %}
+                <tr>
+                    <td>{{ topic.id }}</td>
+                    <td><a href="{% url 'update_topic' topic.id %}">{{ topic.name }}</a></td>
+                    <td>{{ topic.levels }}</td>
+                    <td>{{ topic.lessons }}</td>
+                    <td></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock topics %}

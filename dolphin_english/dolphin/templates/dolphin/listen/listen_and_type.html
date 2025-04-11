@@ -21,9 +21,9 @@
             <div class="exercise-box" data-order="{{ exercise.position }}" data-correct="{{ exercise.correct_text }}">
                 <h2>{{subtopic.title}} <span class="vocab-level">Vocab level: {{subtopic.level}}</span></h2>
                     <div class="navigation">
-                        <button class="preBtn">←</button>
+                        <button class="preBtn" {% if forloop.first %}disabled{% endif %}>←</button>
                         <span class="exercise-count">{{exercise.position}} / {{exercises | length}}</span>
-                        <button class="nextBtn">→</button>
+                        <button class="nextBtn"{% if forloop.last %}disabled{% endif %}>→</button>
                     </div>
                     <audio controls class="playerAudio">
                         <source src="{{ exercise.audioSrc }}" type="audio/mpeg">

@@ -1,0 +1,59 @@
+{% extends "dolphin/admin_user/admin_dashboard.html" %}
+{% load static %}
+
+{% block navbar %}
+<div class="navbar">
+    <a href="{% url 'admin_dashboard' %}">Home</a>
+    <span>></span>
+    <a href="{% url 'subtopics' %}">Subtopics</a>
+</div>
+{% endblock navbar %}
+{% block topics %}
+<div class="list_subtopics">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>LEVEL</th>
+                <th>NUMBER PART</th>
+                <th>TOPIC</th>
+                <th>SECTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for subtopic in subtopics %}
+                <tr>
+                    <td>{{ subtopic.id }}</td>
+                    <td><a href="{% url 'update_subtopic' subtopic.id %}">{{ subtopic.title }}</a></td>
+                    <td>{{ subtopic.level }}</td>
+                    <td>{{ subtopic.num_part }}</td>
+                    <td>{{ subtopic.topic }}</td>
+                    <td>{{ subtopic.section }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="pagination">
+    {% if subtopics.has_previous %}
+        <a href="?page=1">&laquo; First</a>
+        <a href="?page={{ subtopics.previous_page_number }}">&lsaquo; Prev</a>
+    {% endif %}
+
+    {% for num in subtopics.paginator.page_range %}
+        {% if num >= subtopics.number|add:'-3' and num <= subtopics.number|add:'4' %}
+            {% if num == subtopics.number %}
+                <span><strong>{{ num }}</strong></span>
+            {% else %}
+                <a href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+
+    {% if subtopics.has_next %}
+        <a href="?page={{ subtopics.next_page_number }}">Next &rsaquo;</a>
+        <a href="?page={{ subtopics.paginator.num_pages }}">Last &raquo;</a>
+    {% endif %}
+</div>
+{% endblock topics %}

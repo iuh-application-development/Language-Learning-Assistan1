@@ -1,0 +1,38 @@
+{% extends 'dolphin/base.html' %}
+{% load static %}
+{% block content %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dolphin/css/account_information.css'%}?{% now 'U' %}">
+{% endblock extra_css %}
+
+<h2>Account information</h2>
+<table class="account-table">
+    <tr>
+        <td>Email</td>
+        <td>{{user.email}}<a href="{% url 'edit_email' %}">Edit</a></td>
+    </tr>
+    <tr>
+        <td>Display name</td>
+        <td>{{user.nickname}}<a href="{% url 'edit_nickname' %}">Edit</a></td>
+    </tr>
+    <tr>
+        <td>Join date</td>
+        <td>{{user.join_date|date:"Y-m-d"}}</td>
+    </tr>
+    <tr>
+        <td>Total days</td>
+        <td>{{ user.total_days }}</td>
+    </tr>
+    <tr>
+        <td>Active days</td>
+        <td>{{ user.active_days }}</td>
+    </tr>
+    <tr>
+        <td>Inactive days</td>
+        <td>{{ user.inactive_days }}</td>
+    </tr>
+</table>
+
+
+{% endblock content %}

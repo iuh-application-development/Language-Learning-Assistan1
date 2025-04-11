@@ -1,0 +1,42 @@
+{% extends "dolphin/admin_user/admin_dashboard.html" %}
+{% load static %}
+
+
+{% block navbar%}
+<div class="navbar">
+    <a href="{% url 'admin_dashboard' %}">Home</a>
+    <span>></span>
+    <a href="{% url 'users' %}">Users</a>
+</div>
+{% endblock navbar%}
+{% block topics %}
+<div class="list_user">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NICKNAME</th>
+                <th>EMAIL</th>
+                <th>JOIN DATE</th>
+                <th>LAST LOGIN</th>
+                <th>IS ACTIVE</th>
+                <th>IS STAFF</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td><a href="{% url 'update_user' user.id %}">{{ user.nickname }}</a></td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.join_date }}</td>
+                    <td>{{ user.last_login }}</td>
+                    <td>{{ user.is_active }}</td>
+                    <td>{{ user.is_staff }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock topics %}

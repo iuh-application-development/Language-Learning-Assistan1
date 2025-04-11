@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <h1>Dolphin Administration</h1>
+    </header>
+    <a href="{% url 'logout' %}">Logout</a>
+    <div class="dashboard-container">
+        {% block navbar%}
+        <div class="navbar">
+            <a href="{% url 'admin_dashboard' %}">Home</a>
+        </div>
+        {% endblock navbar%}
+        <table>
+            <thead>
+                <h4>Dolphin</h4>
+            </thead>
+            <tbody>
+                {% for section, url in admin_links.items %}
+                <tr>
+                    <td><a href="{% url url.0 %}">{{section}}</a></td>
+                    {% if section != 'Users' %}
+                    <td><a href="{% url url.1 %}">Add</a></td>
+                    {% endif %}
+                    <td><a href="{% url url.0 %}">Update</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="main-content">
+        {% block topics %}
+        {% endblock topics %}
+    </div>
+</body>
+
+</html>

@@ -23,12 +23,11 @@
           <div class="link-item">
             <div class="dropdown">
                 <button class="dropdown-toggle" onclick="toggleDropdown()">
-                    Hi, {{ request.user.username }}
+                    Hi, {{ request.user.nickname }}
                 </button>
                 <div class="dropdown-menu" id="userDropdown">
-                    <a href="{% url 'login' %}">Public profile</a>
-                    <a href="{% url 'login' %}">Account information</a>
-                    <a href="{% url 'login' %}">Change password</a>
+                    <a href="{% url 'user_profile' %}">Account information</a>
+                    <a href="{% url 'edit_pass' user.id %}">Change password</a>
                     <a href="{% url 'logout' %}">Logout</a>
                 </div>
             </div>

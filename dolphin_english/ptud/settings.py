@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-SITE_ID = 2
+SITE_ID = 3
 
 # Application definition
 
@@ -74,12 +74,22 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-LOGIN_REDIRECT_URL = "/"  # Sau khi đăng nhập thành công
-LOGOUT_REDIRECT_URL = "/"
-ACCOUNT_UNIQUE_EMAIL = True
-SOCIALACCOUNT_LOGIN_ON_GET = True
+AUTH_USER_MODEL = 'dolphin.User'
+
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_LOGIN_METHODS = {'email'}
+ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
+
+ACCOUNT_FORMS = {
+    'signup': 'dolphin.forms.CustomSignupForm',
+}
+
+SOCIALACCOUNT_ADAPTER = 'dolphin.adapters.MySocialAccountAdapter'
 SOCIALACCOUNT_AUTO_SIGNUP = True
-ACCOUNT_SIGNUP_REDIRECT_URL = "/"
+SOCIALACCOUNT_LOGIN_ON_GET = True
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 ROOT_URLCONF = "ptud.urls"
 
@@ -161,4 +171,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-

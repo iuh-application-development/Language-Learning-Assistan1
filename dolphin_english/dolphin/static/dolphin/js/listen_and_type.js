@@ -115,11 +115,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Nút next và replay
     document.addEventListener("click", function (event) {
         if (event.target.classList.contains("nextBtnHidden")) {
-            let currentExercise = event.target.closest(".exercise-box");
-            let nextExercise = currentExercise.nextElementSibling;
-            if (nextExercise) {
-                currentExercise.style.display = "none";
-                nextExercise.style.display = "block";
+            if (currentExerciseIndex < totalExercises - 1) {
+                currentExerciseIndex++;
+                updateExerciseDisplay();
             }
         }
         if (event.target.classList.contains("replayBtn")) {

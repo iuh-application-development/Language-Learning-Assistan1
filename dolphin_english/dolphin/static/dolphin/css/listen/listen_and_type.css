@@ -2,6 +2,7 @@
     max-width: 1200px;        /* Giới hạn chiều rộng */
     margin: 0 auto;           /* Căn giữa toàn bộ */
     padding: 20px;
+    margin-top: 20px;
     box-sizing: border-box;
 }
 .breadcrumb {
@@ -156,7 +157,7 @@
 }
 
 /* Dropdown Button Styles */
-.dropdown {
+.content-wrapper .dropdown {
     width: 50%;
 }
 

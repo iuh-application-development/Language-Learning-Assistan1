@@ -15,8 +15,8 @@
     <header class="header">
         <h1 class="header__title">{{ topic.name }}</h1>
         
-        <form class="search-form">
-            <input type="text" class="search-form__input" placeholder="Search">
+        <form class="search-form" method="get">
+            <input type="text" name="q" class="search-form__input" placeholder="Search" value="{{ request.GET.q }}">
             <button type="submit" class="search-form__button">OK</button>
         </form>
     </header>
@@ -28,7 +28,7 @@
         <div class="section">
             <input type="checkbox" id="section{{section.position}}" class="section__toggle">
             <label for="section{{section.position}}" class="section__header">
-                <h2 class="section__title">{{section.title}} <span class="section__count">({{section.subtopics.count}} lessons)</span></h2>
+                <h2 class="section__title">{{section.title}} <span class="section__count">({{ section.filtered_subtopics|length }} lessons)</span></h2>
                 <span class="section__arrow"></span>
             </label>
 
