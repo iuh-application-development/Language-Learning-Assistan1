@@ -16,5 +16,7 @@
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Save</button>
+        <a href="{% url 'delete_subtopic' subtopic.id %}">Delete</a>
+
     </form>
 {% endblock topics %}

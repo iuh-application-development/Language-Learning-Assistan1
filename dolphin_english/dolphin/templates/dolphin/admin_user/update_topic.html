@@ -18,6 +18,8 @@
         {% csrf_token %}
         {{ form.as_p }}  <!-- Render các trường của form -->
         <button type="submit">Save</button>
+        <a href="{% url 'delete_topic' topic.id %}">Delete</a>
+
     </form>
 {% endblock topics %}
     

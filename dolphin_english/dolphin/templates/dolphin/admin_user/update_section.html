@@ -16,5 +16,6 @@
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Save</button>
+        <a href="{% url 'delete_section' section.id %}">Delete</a>
     </form>
 {% endblock topics %}

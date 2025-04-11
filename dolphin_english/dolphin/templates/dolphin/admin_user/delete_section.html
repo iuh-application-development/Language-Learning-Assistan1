@@ -1,11 +1,11 @@
 {% extends "dolphin/admin_user/admin_dashboard.html" %}
 
-{% block content %}
+{% block topics %}
     <h2>Delete Section</h2>
     <p>Are you sure you want to delete the section "{{ section.title }}"?</p>
     <form method="POST">
         {% csrf_token %}
         <button type="submit">Delete Section</button>
     </form>
-    <a href="{% url 'admin_dashboard' %}">Cancel</a>
-{% endblock %}
+    <a href="{% url 'update_section' section.id %}">Cancel</a>
+{% endblock topics %}

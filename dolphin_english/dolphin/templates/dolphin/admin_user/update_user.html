@@ -19,6 +19,8 @@
     <p><strong>Last login:</strong> {{ user.last_login|date:"Y-m-d H:i" }}</p>
     
     <button type="submit">Save</button>
+    <a href="{% url 'delete_user' user.id %}">Delete</a>
+
 </form>
 
 {% endblock topics %}

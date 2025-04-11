@@ -209,7 +209,7 @@ def create_topic(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Topic created successfully!")
-            return redirect('admin_dashboard')
+            return redirect('topics')
     else:
         form = TopicForm()
     return render(request, 'dolphin/admin_user/create_topic.html', {'form':form})
@@ -221,7 +221,7 @@ def create_section(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Section created successfully!")
-            return redirect('admin_dashboard')
+            return redirect('sections')
     else:
         form = SectionForm()
     return render(request, 'dolphin/admin_user/create_section.html', {'form': form})
@@ -233,7 +233,7 @@ def create_subtopic(request):
         if form.is_valid():
             form.save()
             messages.success(request, "SubTopic created successfully!")
-            return redirect('admin_dashboard')
+            return redirect('subtopics')
     else:
         form = SubTopicForm()
     return render(request, 'dolphin/admin_user/create_subtopic.html', {'form': form})
@@ -245,7 +245,7 @@ def create_audio_exercise(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Audio Exercise created successfully!")
-            return redirect('admin_dashboard')
+            return redirect('audios')
     else:
         form = AudioExerciseForm()
     return render(request, 'dolphin/admin_user/create_audio_exercise.html', {'form': form})
@@ -259,7 +259,7 @@ def update_user(request, user_id):
         if form.is_valid():
             form.save()
             messages.success(request,"User updated successfully!")
-            return redirect('admin_dashboard')
+            return redirect('users')
     else:
         form = UserUpdateForm()
     return render(request, 'dolphin/admin_user/update_user.html', {'form':form,'user':user})
@@ -272,7 +272,7 @@ def update_topic(request, topic_id):
         if form.is_valid():
             form.save()
             messages.success(request,'Topic updated successfully!')
-            return redirect('admin_dashboard')
+            return redirect('topics')
     else:
         form = TopicForm()
     return render(request, 'dolphin/admin_user/update_topic.html',{'form':form,'topic':topic})
@@ -285,7 +285,7 @@ def update_section(request, section_id):
         if form.is_valid():
             form.save()
             messages.success(request, "Section updated successfully!")
-            return redirect('admin_dashboard')
+            return redirect('sections')
     else:
         form = SectionForm(instance=section)
     return render(request, 'dolphin/admin_user/update_section.html', {'form': form, 'section':section})
@@ -298,7 +298,7 @@ def update_subtopic(request, subtopic_id):
         if form.is_valid():
             form.save()
             messages.success(request, "SubTopic updated successfully!")
-            return redirect('admin_dashboard')
+            return redirect('subtopics')
     else:
         form = SubTopicForm(instance=subtopic)
     return render(request, 'dolphin/admin_user/update_subtopic.html', {'form': form, 'subtopic':subtopic})
@@ -311,7 +311,7 @@ def update_audio_exercise(request, audio_id):
         if form.is_valid():
             form.save()
             messages.success(request, "Audio Exercise updated successfully!")
-            return redirect('admin_dashboard')
+            return redirect('audios')
     else:
         form = AudioExerciseForm(instance=audio_exercise)
     return render(request, 'dolphin/admin_user/update_audio_exercise.html', {'form': form, 'audio':audio_exercise})
@@ -323,7 +323,7 @@ def delete_topic(request, topic_id):
     if request.method =='POST':
         topic.delete()
         messages.success(request,'Topic deleted successfully!')
-        return redirect('admin_dashboard')
+        return redirect('topics')
     
     return render(request,'dolphin/admin_user/delete_topic.html', {'topic':topic})
 
@@ -333,7 +333,7 @@ def delete_section(request, section_id):
     if request.method == 'POST':
         section.delete()
         messages.success(request, "Section deleted successfully!")
-        return redirect('admin_dashboard')
+        return redirect('sections')
     return render(request, 'dolphin/admin_user/delete_section.html', {'section': section})
 
 @user_passes_test(is_admin)
@@ -342,7 +342,7 @@ def delete_subtopic(request, subtopic_id):
     if request.method == 'POST':
         subtopic.delete()
         messages.success(request, "SubTopic deleted successfully!")
-        return redirect('admin_dashboard')
+        return redirect('subtopics')
     return render(request, 'dolphin/admin_user/delete_subtopic.html', {'subtopic': subtopic})
 
 @user_passes_test(is_admin)
@@ -351,7 +351,7 @@ def delete_audio_exercise(request, audio_id):
     if request.method == 'POST':
         audio_exercise.delete()
         messages.success(request, "Audio Exercise deleted successfully!")
-        return redirect('admin_dashboard')
+        return redirect('audios')
     return render(request, 'dolphin/admin_user/delete_audio_exercise.html', {'audio_exercise': audio_exercise})
 
 @user_passes_test(is_admin)
@@ -360,5 +360,5 @@ def delete_user(request, user_id):
     if request.method == 'POST':
         user.delete()
         messages.success(request, "User deleted successfully!")
-        return redirect('admin_dashboard')
+        return redirect('users')
     return render(request, 'dolphin/admin_user/delete_user.html', {'user': user})

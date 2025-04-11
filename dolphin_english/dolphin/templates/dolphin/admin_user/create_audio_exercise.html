@@ -1,10 +1,10 @@
 {% extends "dolphin/admin_user/admin_dashboard.html" %}
 
-{% block content %}
+{% block topics %}
     <h2>Create Audio Exercise</h2>
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Create Audio Exercise</button>
     </form>
-{% endblock %}
+{% endblock topics %}

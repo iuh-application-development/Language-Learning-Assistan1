@@ -1,11 +1,11 @@
 {% extends "dolphin/admin_user/admin_dashboard.html" %}
 
-{% block content %}
+{% block topics %}
     <h2>Delete Audio Exercise</h2>
     <p>Are you sure you want to delete the audio exercise "{{ audio_exercise.subtopic.title }}"?</p>
     <form method="POST">
         {% csrf_token %}
         <button type="submit">Delete Audio Exercise</button>
     </form>
-    <a href="{% url 'admin_dashboard' %}">Cancel</a>
-{% endblock %}
+    <a href="{% url 'update_audio_exercise' audio_exercise.id %}">Cancel</a>
+{% endblock topics %}
