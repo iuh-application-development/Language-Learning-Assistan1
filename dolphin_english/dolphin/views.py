@@ -119,13 +119,16 @@ def changeNickname(request):
         form = ChangeNickName(request.POST)
         if form.is_valid():
             new_nickname = form.cleaned_data['nickname']
-            user.nickname = new_nickname
-            user.save()
-            messages.success(request, "Nickname updated successfully.")
-            return redirect("user_profile", user_id=user.id)
+            if User.objects.exclude(id=user.id).filter(nickname=new_nickname).exists():
+                messages.error(request, "Nickname already exists. Please choose another one.")
+            else:
+                user.nickname = new_nickname
+                user.save()
+                messages.success(request, "Nickname updated successfully.")
+                return redirect("user_profile", user_id=user.id)
     else:
-        form = ChangeNickName(initial={'nickname':user.nickname})
-    return render(request, 'dolphin/admin_user/edit_nickname.html',{'form':form})
+        form = ChangeNickName(initial={'nickname': user.nickname})
+    return render(request, 'dolphin/admin_user/edit_nickname.html', {'form': form})
 
 @login_required
 def changeEmail(request):
@@ -134,13 +137,17 @@ def changeEmail(request):
         form = ChangeEmail(request.POST)
         if form.is_valid():
             new_email = form.cleaned_data['email']
-            user.email = new_email
-            user.save()
-            messages.success(request, "Email updated successfully.")
-            return redirect("user_profile")
+            if User.objects.exclude(id=user.id).filter(email=new_email).exists():
+                messages.error(request, "Email already exists. Please use a different one.")
+            else:
+                user.email = new_email
+                user.save()
+                messages.success(request, "Email updated successfully.")
+                return redirect("user_profile")
     else:
-        form = ChangeEmail(initial={'email':user.email})
-    return render(request, 'dolphin/admin_user/edit_email.html',{'form':form})
+        form = ChangeEmail(initial={'email': user.email})
+    return render(request, 'dolphin/admin_user/edit_email.html', {'form': form})
+
 
 @login_required
 def changePassword(request, user_id):

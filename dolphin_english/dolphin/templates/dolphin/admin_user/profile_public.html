@@ -16,7 +16,7 @@
     </div>
   
     <div class="activity-info">
-      <p><strong>Active time:</strong> {{ user.active_hours }}</p>
+      {% comment %} <p><strong>Active time:</strong> {{ user.active_hours }}</p> {% endcomment %}
       <p><strong>Last 7 days:</strong> {{ active_7_days }} hours</p>
       <p><strong>Last 30 days:</strong> {{ active_30_days }} hours</p>
       <a href="{% url 'user_lesson_history' user.id %}">View recent lessons</a>
