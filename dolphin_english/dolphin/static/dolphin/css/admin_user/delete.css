@@ -1,0 +1,56 @@
+/* admin_user_delete.css */
+
+.delete-user-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    background-color: #fff;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.delete-user-container h2 {
+    color: #d9534f; /* đỏ cảnh báo */
+    margin-bottom: 20px;
+}
+
+.delete-user-container p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.delete-user-container form {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.delete-user-container button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-user-container button:hover {
+    background-color: #c9302c;
+}
+
+.delete-user-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5bc0de;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-user-container a:hover {
+    background-color: #31b0d5;
+}

@@ -1,0 +1,52 @@
+.account-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    table-layout: fixed;
+  }
+  
+  .account-table tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .account-table td {
+    padding: 12px 16px;
+    vertical-align: middle;
+  }
+  
+  .account-table td:first-child {
+    font-weight: 600;
+    width: 200px;
+    color: #333;
+    border-right: 1px solid #e6e6e6;  /* Đường kẻ dọc giữa 2 cột */
+  }
+  
+  .account-table td:last-child {
+    color: #333;
+  }
+  
+  .account-table a {
+    margin-left: 8px;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .status-yes {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  .disconnect-link {
+    margin-left: 10px;
+    color: #888;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  

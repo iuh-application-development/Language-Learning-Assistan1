@@ -1,7 +1,10 @@
 {% extends "dolphin/base.html" %}
 {% load static %}
-{% block ipa %}
+{% block content %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dolphin/css/listen/subtopic.css'%}?{% now 'U' %}">
+{% endblock extra_css %}
 <div class="search-container">
     <nav class="breadcrumb">
         <a href="#" class="breadcrumb__link">All topics</a>
@@ -12,27 +15,34 @@
     <header class="header">
         <h1 class="header__title">{{ topic.name }}</h1>
         
-        <form class="search-form">
-            <input type="text" class="search-form__input" placeholder="Search">
+        <form class="search-form" method="get">
+            <input type="text" name="q" class="search-form__input" placeholder="Search" value="{{ request.GET.q }}">
             <button type="submit" class="search-form__button">OK</button>
         </form>
     </header>
 </div>
 
 <!-- Hiển thị danh sách SubTopics -->
-<div class="ipa_container">
-    <h2>{{ topic.title }}</h2>
-    <div class="lesson-grid">
-        {% for subtopic in subtopics %}
-            <div class="lesson-box">
-                <span class="star">☆</span>
-                <a href="{% url 'listen_and_type' topic.slug subtopic.slug %}">{{ subtopic.title }}</a>
+<div class="container">
+    {% for section in sections %}
+        <div class="section">
+            <input type="checkbox" id="section{{section.position}}" class="section__toggle">
+            <label for="section{{section.position}}" class="section__header">
+                <h2 class="section__title">{{section.title}} <span class="section__count">({{ section.filtered_subtopics|length }} lessons)</span></h2>
+                <span class="section__arrow"></span>
+            </label>
+
+            <div class="section__content">
+                <div class="lessons-grid">
+                    {% for sub in section.subtopics.all %}
+                    <div class="lesson-card">
+                        <h3 class="lesson-card__title"><a href="{% url 'listen_and_type' topic.slug sub.slug %}">{{sub.title}}</a></h3>
+                        <p class="lesson-card__meta">{{sub.num_part}} parts · Vocab level: {{sub.level}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
-        {% empty %}
-            <p>Không có bài học nào.</p>
-        {% endfor %}
-    </div>
+        </div>
+    {% endfor %}
 </div>
-
-
-{% endblock ipa %}
+{% endblock content %}

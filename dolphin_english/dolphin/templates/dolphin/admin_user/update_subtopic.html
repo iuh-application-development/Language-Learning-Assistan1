@@ -1,0 +1,22 @@
+{% extends "dolphin/admin_user/admin_dashboard.html" %}
+
+{% block navbar%}
+<a href="{% url 'admin_dashboard' %}">Home</a>
+    <span>></span>
+    <a href="{% url 'subtopics' %}">Subtopics</a>
+    <span>></span>
+    <a href="{% url 'update_subtopic' subtopic.id %}">{{subtopic.title}}</a>
+</div>
+{% endblock navbar%}
+
+{% block topics %}
+    <h2>Update SubTopic</h2>
+    <h3>{{ subtopic.title }}</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+        <a href="{% url 'delete_subtopic' subtopic.id %}">Delete</a>
+
+    </form>
+{% endblock topics %}

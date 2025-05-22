@@ -1,85 +1,69 @@
-/* ===========================
-   Cập nhật CSS cho Form Đăng Nhập
-   =========================== */
-
-/* Định dạng khung chính của form */
 .form-container {
-    background-color: #fff;
-    padding: 25px;
+    background-color: white;
+    width: 380px;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 420px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-
-    /* Đặt form nằm giữa màn hình nhưng dưới header */
-    position: absolute;
-    top: 120px; /* Đẩy form xuống dưới header */
-    left: 50%;
-    transform: translateX(-50%);
-    
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Hiệu ứng xuất hiện nhẹ */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
+    margin: 50px auto;
 }
 
 /* Tiêu đề */
 .form-title {
-    font-size: 22px;
-    color: #2c3e50;
-    margin-bottom: 18px;
+    font-size: 24px;
     font-weight: bold;
-    text-transform: uppercase;
+    color: #2c3e50;
+    margin-bottom: 20px;
 }
 
-/* Nhóm input */
-.input-group {
+.sign-in-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
     margin-bottom: 15px;
+}
+
+.input-group {
     text-align: left;
+    margin-bottom: 15px;
 }
 
 .input-group label {
-    font-size: 13px;
-    color: #555;
+    font-size: 14px;
     font-weight: 600;
+    color: #555;
+    display: block;
     margin-bottom: 5px;
 }
 
 .input-group input {
     width: 100%;
     padding: 10px;
-    font-size: 13px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #bdc3c7;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
 }
 
 .input-group input:focus {
     border-color: #3498db;
+    background-color: white;
     outline: none;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
 }
 
-/* Nút đăng nhập */
 .btn-submit {
     width: 100%;
-    padding: 10px;
-    font-size: 14px;
+    padding: 12px;
+    font-size: 16px;
     font-weight: bold;
     color: white;
     background-color: #3498db;
     border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
     margin-top: 10px;
 }
 
@@ -87,108 +71,38 @@
     background-color: #2980b9;
 }
 
-/* Đường dẫn đăng ký */
-.signup-link {
-    font-size: 12px;
-    margin-top: 15px;
-    color: #7f8c8d;
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
 }
 
-.signup-link a {
-    color: #3498db;
-    text-decoration: none;
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ccc;
 }
 
-.signup-link a:hover {
-    color: #1d6fa5;
-    text-decoration: underline;
-}
-
-/* ===========================
-   Responsive cho Mobile
-   =========================== */
-@media (max-width: 480px) {
-    .form-container {
-        width: 90%;
-        padding: 20px;
-        top: 100px;
-    }
-}
-
-/* ===========================
-   Thông báo lỗi
-   =========================== */
-
-/* Định dạng chung cho thông báo lỗi */
-.error-message {
-    color: #e74c3c; /* Màu đỏ nổi bật */
-    font-size: 13px;
-    font-weight: 500;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    padding: 8px;
-    background-color: #ffecec; /* Nền nhạt */
-    border-left: 4px solid #e74c3c; /* Viền trái đỏ */
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-/* Định dạng khi có nhiều lỗi cùng lúc */
-.error-message ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-.error-message ul li {
-    padding-left: 16px;
-    position: relative;
-    font-size: 13px;
-    color: #d63031;
-}
-
-/* Thêm biểu tượng trước mỗi lỗi */
-.error-message ul li::before {
-    content: "⚠️";
-    position: absolute;
-    left: 0;
+.divider span {
+    padding: 0 10px;
     font-size: 14px;
+    color: #777;
 }
 
-/* Định dạng cho lỗi toàn cục (non-field errors) */
-.non-field-errors {
-    color: #d63031;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 10px;
-    background-color: #ffecec;
-    border-left: 4px solid #e74c3c;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-/* Hiệu ứng hover */
-.error-message:hover {
-    background-color: #ffe0e0;
-    transition: background-color 0.3s ease-in-out;
-}
-
-/* ===========================
-   CSS cho Google Login
-   =========================== */
 .google-btn-container {
     text-align: center;
-    margin-top: 20px;
 }
 
 .google-btn {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     background-color: white;
     color: black;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: bold;
     text-decoration: none;
     transition: background 0.3s;
@@ -204,4 +118,28 @@
     width: 20px;
     height: 20px;
     margin-right: 10px;
+}
+
+.signup-link {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #7f8c8d;
+}
+
+.signup-link a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    color: #1d6fa5;
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        width: 90%;
+        padding: 20px;
+        margin-top: 30px;
+    }
 }

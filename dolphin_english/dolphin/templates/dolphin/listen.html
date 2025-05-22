@@ -1,6 +1,10 @@
 {% extends "dolphin/base.html" %}
 {% load static %}
-{% block listen %}
+{% block content %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dolphin/css/listen.css'%}?{% now 'U' %}">
+{% endblock extra_css %}
 
 <h1> All topics</h1>
 <div class="topics-container">
@@ -16,7 +20,7 @@
     {% endfor %}
 </div>
 
-{% endblock listen %}
+{% endblock content %}
 
 
         

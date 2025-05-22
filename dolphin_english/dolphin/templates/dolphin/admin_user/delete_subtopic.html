@@ -1,0 +1,11 @@
+{% extends "dolphin/admin_user/admin_dashboard.html" %}
+
+{% block topics %}
+    <h2>Delete SubTopic</h2>
+    <p>Are you sure you want to delete the subtopic "{{ subtopic.title }}"?</p>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Delete SubTopic</button>
+    </form>
+    <a href="{% url 'update_subtopic' subtopic.id %}">Cancel</a>
+{% endblock topics %}

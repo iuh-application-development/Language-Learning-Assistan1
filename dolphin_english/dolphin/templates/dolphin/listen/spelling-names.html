@@ -1,42 +1,59 @@
 {% extends "dolphin/base.html" %}
 {% load static %}
-{% block spelling_names %}
+{% block content %}
 
-
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dolphin/css/listen/subtopic.css'%}?{% now 'U' %}">
+{% endblock extra_css %}
 <div class="search-container">
     <!-- Breadcrumb navigation -->
     <nav class="breadcrumb">
-        <a href="#" class="breadcrumb__link">All topics</a>
+        <a href="{% url 'listen' %}" class="breadcrumb__link">All topics</a>
         <span class="breadcrumb__separator">/</span>
-        <span class="breadcrumb__current">Spelling Names</span>
+        <span class="breadcrumb__current">{{topic.name}}</span>
     </nav>
 
     <!-- Header section -->
     <header class="header">
-        <h1 class="header__title">Spelling Names</h1>
-        
-        <!-- Search form -->
-        <form class="search-form">
-            <input type="text" class="search-form__input" placeholder="Search">
+        <h1 class="header__title">{{topic.name}}</h1>
 
+        <!-- Search form -->
+        <form class="search-form" method="get">
+            <input type="text" name="q" class="search-form__input" placeholder="Search" value="{{ request.GET.q }}">
             <button type="submit" class="search-form__button">OK</button>
         </form>
     </header>
 </div>
 
-
-
 <!-- Sections -->
-<div class="spelling_names_container">
-    <div class="lesson-grid">
-        {% for spelling_names in subtopics %}
-            <div class="lesson-box">
-                <span class="star">☆</span>
-                <a href="{% url 'listen_and_type' topic.slug spelling_names.slug %}">{{spelling_names.title}}</a>
-            </div>
-        {% endfor %}
-    </div>
-</div>
-{% endblock spelling_names %}
-    
+<div class="container">
+    {% for section in sections %}
+        <div class="section">
+            <input type="checkbox" id="section{{section.position}}" class="section__toggle">
+            <label for="section{{section.position}}" class="section__header">
+                <h2 class="section__title">
+                    {{section.title}} 
+                    <span class="section__count">({{ section.filtered_subtopics|length }} lessons)</span>
+                </h2>
+                <span class="section__arrow"></span>
+            </label>
 
+            <div class="section__content">
+                <div class="lessons-grid">
+                    {% for sub in section.filtered_subtopics %}
+                        <div class="lesson-card">
+                            <h3 class="lesson-card__title">
+                                <a href="{% url 'listen_and_type' topic.slug sub.slug %}">{{sub.title}}</a>
+                            </h3>
+                            <p class="lesson-card__meta">{{sub.num_part}} parts · Vocab level: {{sub.level}}</p>
+                        </div>
+                    {% empty %}
+                        <p class="no-result">No lessons found in this section.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

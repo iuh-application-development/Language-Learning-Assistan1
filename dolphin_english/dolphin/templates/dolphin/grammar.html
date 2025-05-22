@@ -1,6 +1,11 @@
 {% extends "dolphin/base.html" %}
 {% load static %}
-{% block grammar %}
+{% block content %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dolphin/css/grammar.css'%}?{% now 'U' %}">
+{% endblock extra_css %}
+
 <main>
     <nav class="table-of-contents" style="margin-top: 40px;">
         <h2>Mục Lục</h2>
@@ -11,10 +16,10 @@
                 <li><a href="#present_perfect">Present Perfect (Hiện tại hoàn thành)</a></li>
                 <li><a href="#present_perfect_continuous">Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)</a></li>
                 <li><a href="#past_simple">Past Simple (Quá khứ đơn)</a></li>
-                <li><a href="#past_continuous">Past continous (Qúa khứ tiếp diễn)</a></li>
+                <li><a href="#past_continuous">Past Continuous (Qúa khứ tiếp diễn)</a></li>
                 <li><a href="#past_perfect">Past Perfect (Qúa khứ hoàn thành)</a></li>
                 <li><a href="#past_perfect_continuous">Past Perfect Continuous (Qúa khứ hoàn thành tiếp  diễn)</a></li>
-                <li><a href="#ruture_simple">Future Simple (Tương lai đơn)</a></li>
+                <li><a href="#future_simple">Future Simple (Tương lai đơn)</a></li>
                 <li><a href="#future_continuous">Future Continuous (Tương lai tiếp diễn)</a></li>
                 <li><a href="#future_perfect">Future Perfect (Tương lai hoàn thành)</a></li>
                 <li><a href="#future_perfect_continuous">Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)</a></li>
@@ -886,4 +891,4 @@
             }
         </script>
     {% endblock backToTop %}
-{% endblock grammar %}
+{% endblock content %}

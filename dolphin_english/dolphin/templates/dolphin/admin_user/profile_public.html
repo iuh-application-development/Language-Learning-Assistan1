@@ -1,0 +1,27 @@
+{% extends "dolphin/base.html" %}
+{% load static %}
+
+{% block content %}
+{% block extra_css %}
+
+{% endblock extra_css %}
+<div class="user-profile-card">
+    <div class="user-info">
+      <h2>{{ user.get_full_name|default:user.nickname }}</h2>
+      <p><strong>ID:</strong> #{{ user.id }}</p>
+  
+      <p><strong>Join date:</strong> {{ user.join_date|date:"d M Y" }}</p>
+      <p><strong>Last active:</strong> {{ user.last_active_date|timesince }} ago</p>
+      <p><strong>Lesson completions:</strong> {{ lessons_completed }}</p>
+    </div>
+  
+    <div class="activity-info">
+      {% comment %} <p><strong>Active time:</strong> {{ user.active_hours }}</p> {% endcomment %}
+      <p><strong>Last 7 days:</strong> {{ active_7_days }} hours</p>
+      <p><strong>Last 30 days:</strong> {{ active_30_days }} hours</p>
+      <a href="{% url 'user_lesson_history' user.id %}">View recent lessons</a>
+    </div>
+  </div>
+  
+{% endblock content %}
+

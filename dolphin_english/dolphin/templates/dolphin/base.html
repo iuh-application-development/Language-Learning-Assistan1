@@ -6,27 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dolphin</title>
     <link rel="stylesheet" href="{% static 'dolphin/css/base.css'%}?{% now 'U' %}">
-    <link rel="stylesheet" href="{% static 'dolphin/css/grammar.css'%}?{% now 'U' %}">
-    <link rel="stylesheet" href="{% static 'dolphin/css/listen.css'%}?{% now 'U' %}">
-    <link rel="stylesheet" href="{% static 'dolphin/css/register.css'%}?{% now 'U' %}">
-    <link rel="stylesheet" href="{% static 'dolphin/css/login.css'%}?{% now 'U' %}">
-    <link rel="stylesheet" href="{% static 'dolphin/css/home.css'%}?{% now 'U' %}">
-    <link rel="stylesheet" href="{% static 'dolphin/css/function.css'%}?{% now 'U' %}">
-    {% comment %} <link rel="stylesheet" href="{% static 'dolphin/css/home.css'%}?{% now 'U' %}"> {% endcomment %}
 
-    <!-- Listen View CSS -->
-    <link rel="stylesheet" href="{% static 'dolphin/css/listen/short-stories.css'%}?{% now 'U' %}">
-    <link rel="stylesheet" href="{% static 'dolphin/css/listen/conversations.css'%}?{% now 'U' %}">
-    <link rel="stylesheet" href="{% static 'dolphin/css/listen/toeic.css'%}?{% now 'U' %}">
-    <link rel="stylesheet" href="{% static 'dolphin/css/listen/toefl.css'%}?{% now 'U' %}">
-    <link rel="stylesheet" href="{% static 'dolphin/css/listen/ielts.css'%}?{% now 'U' %}">
-    <link rel="stylesheet" href="{% static 'dolphin/css/listen/ipa.css'%}?{% now 'U' %}">
-    <link rel="stylesheet" href="{% static 'dolphin/css/listen/spelling-names.css'%}?{% now 'U' %}">
-    <link rel="stylesheet" href="{% static 'dolphin/css/listen/numbers.css'%}?{% now 'U' %}">
-    <link rel="stylesheet" href="{% static 'dolphin/css/listen/listen_and_type.css'%}?{% now 'U' %}">
-    
+    {% block extra_css %} 
+    <!-- All file css in this block -->
+    {% endblock extra_css %}
 
-    <!-- /Listen View CSS -->
 </head>
 <body>
     <header>
@@ -37,43 +21,40 @@
           <div class="link-item"><a href="{% url 'grammar' %}">Grammar</a></div>
           {% if request.user.is_authenticated %}
           <div class="link-item">
-              <span class="user-info">
-                  <a href="{% url 'logout' %}">Logout</a> (Hi, {{request.user.username}})
-              </span>
+            <div class="dropdown">
+                <button class="dropdown-toggle" onclick="toggleDropdown()">
+                    Hi, {{ request.user.nickname }}
+                </button>
+                <div class="dropdown-menu" id="userDropdown">
+                    {% comment %} <a href="{% url 'user_profile' user.id %}">Profile</a> {% endcomment %}
+                    <a href="{% url 'user_account' %}">Account information</a>
+                    <a href="{% url 'edit_pass' user.id %}">Change password</a>
+                    <a href="{% url 'logout' %}">Logout</a>
+                </div>
+            </div>
           </div>
           {% else %}
-          <div class="link-item"><a href="{% url 'login' %}?next={{ request.path }}">Login</a></div>
+          <div class="link-item"><a href="{% url 'login' %}">Login</a></div>
           <div class="link-item"><a href="{% url 'register' %}">Register</a></div>
           {% endif %}
         </div>
-      </header>
+    </header>
     <div class="page-content">
         <div class="main-content">
-            {% block home %}{% endblock home %}
-            {% block function %}{% endblock function %}
-    
-            
-            {% block listen %}{% endblock listen %}
-            
-            <!-- Listen view -->
-            {% block topic_detail %}{% endblock topic_detail %}
-            {% block short-stories %}{% endblock short-stories %}
-            {% block conversations %}{% endblock conversations %}
-            {% block toeic-listening %}{% endblock toeic-listening %}
-            {% block ielts-listening %}{% endblock ielts-listening %}
-            {% block toefl-listening %}{% endblock toefl-listening %}
-            {% block ipa %}{% endblock ipa %}
-            {% block numbers %}{% endblock numbers %}
-            {% block spelling_names %}{% endblock spelling_names %}
-            {% block listen_and_type %}{% endblock listen_and_type %}
+            {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-default{% endif %}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
 
-            <!-- /Listen view -->
-            {% block grammar %}
+            {% block content %}
                 {% block backToTop %}   
                 {% endblock backToTop %}
-            {% endblock grammar %}
-            {% block login %}{% endblock login %}
-            {% block register %}{% endblock register %}
+            {% endblock content %}
         </div>
     </div>
     
@@ -111,9 +92,24 @@
             © 2025 Dolphin App. Tất cả các quyền được bảo lưu.
         </div>
     </footer>
-{% block extra_js %}
-<script src="{% static 'dolphin/js/script_sections.js' %}"></script>
+<script src="{% static 'dolphin/js/script_sections.js' %}?{% now 'U' %}"></script>
+<script src="{% static 'dolphin/js/listen_and_type.js' %}?{% now 'U' %}"></script>
+<script src="{% static 'dolphin/js/home.js' %}?{% now 'U' %}"></script>
+<script>
+     function toggleDropdown() {
+        var dropdown = document.getElementById("userDropdown");
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+// Đóng menu nếu click bên ngoài
+    document.addEventListener("click", function(event) {
+        var dropdown = document.getElementById("userDropdown");
+        var button = document.querySelector(".dropdown-toggle");
 
-{% endblock extra_js %}
+        if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+            dropdown.style.display = "none";
+        }
+    });
+
+</script>
 </body>
 </html>

@@ -1,8 +1,10 @@
 {% extends "dolphin/base.html" %}
 {% load static %}
-{% block toefl-listening %}
+{% block content %}
 
-
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dolphin/css/listen/subtopic.css'%}?{% now 'U' %}">
+{% endblock extra_css %}
 <div class="search-container">
     <!-- Breadcrumb navigation -->
     <nav class="breadcrumb">
@@ -16,20 +18,21 @@
         <h1 class="header__title">TOEFL Listening</h1>
         
         <!-- Search form -->
-        <form class="search-form">
-            <input type="text" class="search-form__input" placeholder="Search">
+        <form class="search-form" method="get">
+            <input type="text" name="q" class="search-form__input" placeholder="Search" value="{{ request.GET.q }}">
             
             <div class="search-form__select-wrapper">
-                <select class="search-form__select">
-                    <option value="all">All levels</option>
-                    <option value="A1">B1</option>
-                    <option value="A2">B2</option>
-                    <option value="B1">C1</option>
-                    <option value="B1">C1</option>
-                    <!-- Add more options as needed -->
+                <select name="level" class="search-form__select">
+                    <option value="all" {% if request.GET.level == 'all' %}selected{% endif %}>All levels</option>
+                    <option value="A1" {% if request.GET.level == 'A1' %}selected{% endif %}>A1</option>
+                    <option value="A2" {% if request.GET.level == 'A2' %}selected{% endif %}>A2</option>
+                    <option value="B1" {% if request.GET.level == 'B1' %}selected{% endif %}>B1</option>
+                    <option value="B2" {% if request.GET.level == 'B2' %}selected{% endif %}>B2</option>
+                    <option value="C1" {% if request.GET.level == 'C1' %}selected{% endif %}>C1</option>
+                    <option value="C2" {% if request.GET.level == 'C2' %}selected{% endif %}>C2</option>
                 </select>
             </div>
-
+        
             <button type="submit" class="search-form__button">OK</button>
         </form>
     </header>
@@ -38,32 +41,32 @@
 
 
 <!-- Sections -->
-<div class="toefl-listening-container">
+<div class="container">
     {% for section in sections %}
         <div class="section">
             <!-- Using checkbox hack for expand/collapse functionality -->
             <!--Section 1-->
-            <input type="checkbox" id="section{{section.order}}" class="section__toggle">
-            <label for="section{{section.order}}" class="section__header">
-                <h2 class="section__title">{{section.title}} <span class="section__count">({{section.subtopics.count}} lessons)</span></h2>
+            <input type="checkbox" id="section{{section.position}}" class="section__toggle">
+            <label for="section{{section.position}}" class="section__header">
+                <h2 class="section__title">{{section.title}} <span class="section__count">({{ section.filtered_subtopics|length }} lessons)</span></h2>
                 <span class="section__arrow"></span>
             </label>
 
             <div class="section__content">
                 <div class="lessons-grid">
-                    {% for sub in section.subtopics.all %}
-                    <div class="lesson-card">
-                        <h3 class="lesson-card__title"><a href="{% url 'listen_and_type' topic.slug sub.slug %}">{{sub.title}}</a></h3>
-                        <p class="lesson-card__meta">{{sub.num_part}} parts · Vocab level: {{sub.level}}</p>
-                    </div>
+                    {% for sub in section.filtered_subtopics %}
+                        <div class="lesson-card">
+                            <h3 class="lesson-card__title">
+                                <a href="{% url 'listen_and_type' topic.slug sub.slug %}">{{ sub.title }}</a>
+                            </h3>
+                            <p class="lesson-card__meta">{{ sub.num_part }} parts · Vocab level: {{ sub.level }}</p>
+                        </div>
                     {% endfor %}
                 </div>
             </div>
         </div>
     {% endfor %}
 </div>
-<script src="{% static 'dolphin/js/script_sections.js' %}"></script>
-
-{% endblock toefl-listening %}
+{% endblock content %}
     
 

@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,14 +24,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-5lalhmb2x3qltg#2b#33%n34&lzb7w4)i4go)w!ri@2)t9!3t8"
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
-SITE_ID = 2
+SITE_ID = 4
+SITE_ID = 4
 
 # Application definition
 
@@ -73,18 +77,24 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-LOGIN_REDIRECT_URL = "/"
-LOGOUT_REDIRECT_URL = "/"
+AUTH_USER_MODEL = 'dolphin.User'
 
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_LOGIN_METHODS = {'email'}
+ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
+
+ACCOUNT_FORMS = {
+    'signup': 'dolphin.forms.CustomSignupForm',
+}
+
+SOCIALACCOUNT_ADAPTER = 'dolphin.adapters.MySocialAccountAdapter'
+SOCIALACCOUNT_AUTO_SIGNUP = True
 SOCIALACCOUNT_LOGIN_ON_GET = True
-SOCIALACCOUNT_AUTO_SIGNUP = True  # Tự động đăng ký tài khoản mới
-ACCOUNT_SIGNUP_REDIRECT_URL = "/"  # Chuyển hướng về home nếu phải đăng ký
-ACCOUNT_EMAIL_REQUIRED = True  # Bắt buộc có email
-ACCOUNT_USERNAME_REQUIRED = False  # Không yêu cầu username
-ACCOUNT_AUTHENTICATION_METHOD = "email"  # Xác thực bằng email thay vì username
-ACCOUNT_UNIQUE_EMAIL = True  # Email phải là duy nhất
 
-
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = '/login/'
+LOGIN_URL = '/login/'
 
 ROOT_URLCONF = "ptud.urls"
 
@@ -113,11 +123,11 @@ WSGI_APPLICATION = "ptud.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',  # Tên database (cố định là postgres trên Supabase)
-        'USER': 'postgres.xsutpoaldoomzirjkvzj',  # Tên user mặc định trên Supabase
-        'PASSWORD': 'tbReKoiyjQmIVmnx',  # Mật khẩu từ connection string
-        'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',  # Lấy từ Supabase connection string
-        'PORT': '6543',  # Cổng mặc định cho PostgreSQL
+        'NAME': os.getenv('DB_NAME'),  # Tên database (cố định là postgres trên Supabase)
+        'USER': os.getenv('DB_USER'),  # Tên user mặc định trên Supabase
+        'PASSWORD': os.getenv('DB_PASSWORD'),  # Mật khẩu từ connection string
+        'HOST': os.getenv('DB_HOST'),  # Lấy từ Supabase connection string
+        'PORT': os.getenv('DB_PORT'),  # Cổng mặc định cho PostgreSQL
     }
 }
 # postgresql://postgres:[dolphin123456@@]@db.suuncnrzpfgpqudxdmmr.supabase.co:5432/postgres
@@ -166,4 +176,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-

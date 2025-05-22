@@ -1,8 +1,12 @@
 {% extends "dolphin/base.html" %}
 {% load static %}
 
-{% comment %} {% block home %} {% endcomment %}
-{% block home %}
+{% block content %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dolphin/css/home.css'%}?{% now 'U' %}">
+{% endblock extra_css %}
+
 <div class="home-container">
     <!-- Hero Section -->
     <section class="hero">
@@ -11,7 +15,41 @@
                 <h1>Học tiếng Anh miễn phí, hiệu quả và vui nhộn!</h1>
                 <p class="subtitle">The most popular way to learn English in Vietnam</p>
                 <div class="hero-buttons">
-                    <a href="{% url 'function' %}" class="btn-primary">BẮT ĐẦU NGAY</a>
+                    <a href="#" id="openModal" class="btn-primary">BẮT ĐẦU NGAY</a>
+
+                    <div id="featuresModal" class="features-overlay">
+                        <div class="features-container">
+                            <div class="features-header">
+                                <h2>Chọn cách học của bạn</h2>
+                                <span class="close-overlay">&times;</span>
+                            </div>
+                            <div class="features-options">
+                                <a href="{% url 'listen' %}" class="feature-option">
+                                    <div class="feature-icon">
+                                        <img src="{% static 'dolphin/img/headphone.png' %}" alt="icon">
+                                    </div>
+                                    <div class="feature-details">
+                                        <h3>Luyện Nghe (Listen)</h3>
+                                        <p>Cải thiện khả năng nghe với các bài học từ cơ bản đến nâng cao, bao gồm hội thoại, short stories, và đề thi TOEIC, IELTS, TOEFL.</p>
+                                        <button class="start-button">Bắt đầu</button>
+                                    </div>
+                                </a>
+                                <a href="{% url 'grammar' %}" class="feature-option">
+                                    <div class="feature-icon">
+                                        <img src="{% static 'dolphin/img/gramma.png' %}" alt="icon">
+                                    </div>
+                                    <div class="feature-details">
+                                        <h3>Ngữ Pháp (Grammar)</h3>
+                                        <p>Học ngữ pháp tiếng Anh một cách dễ hiểu với các bài học ngắn gọn, ví dụ thực tế và bài tập thực hành.</p>
+                                        <button class="start-button">Bắt đầu</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="features-footer">
+                                <p>Hoặc <a href="{% url 'register' %}">đăng ký tài khoản</a> để lưu tiến độ học tập.</p>
+                            </div>
+                        </div>
+                    </div>
                     <a href="{% url 'login' %}" class="btn-secondary">TÔI ĐÃ CÓ TÀI KHOẢN</a>
                 </div>
             </div>
@@ -63,21 +101,21 @@
             <div class="testimonial">
                 <div class="quote">"Tôi đã cải thiện điểm TOEIC từ 450 lên 750 chỉ sau 3 tháng học với Dolphin!"</div>
                 <div class="testimonial-author">
-                    <img src="{% static 'dolphin/img/avatars/student1.jpg' %}" alt="Student avatar">
+                    <img src="https://avatar.iran.liara.run/public/22" alt="Student avatar">
                     <p>Nguyễn Văn A<span>Sinh viên ĐH Bách Khoa</span></p>
                 </div>
             </div>
             <div class="testimonial">
                 <div class="quote">"Giao diện thân thiện và bài tập thú vị giúp tôi học tiếng Anh mỗi ngày mà không cảm thấy nhàm chán."</div>
                 <div class="testimonial-author">
-                    <img src="{% static 'dolphin/img/avatars/student2.jpg' %}" alt="Student avatar">
+                    <img src="https://avatar.iran.liara.run/public/54" alt="Student avatar">
                     <p>Trần Thị B<span>Nhân viên văn phòng</span></p>
                 </div>
             </div>
             <div class="testimonial">
                 <div class="quote">"Tôi đã tự tin giao tiếp với đối tác nước ngoài sau khóa học Tiếng Anh giao tiếp của Dolphin."</div>
                 <div class="testimonial-author">
-                    <img src="{% static 'dolphin/img/avatars/student3.jpg' %}" alt="Student avatar">
+                    <img src="https://avatar.iran.liara.run/public/87" alt="Student avatar">
                     <p>Lê Văn C<span>Chuyên viên marketing</span></p>
                 </div>
             </div>
@@ -93,5 +131,5 @@
         </div>
     </section>
 </div>
-{% comment %} {% endblock home %} {% endcomment %}
-{% endblock home %}
+{% endblock content %}
+
