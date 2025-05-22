@@ -18,7 +18,7 @@
     <div class="content-wrapper">
         <div class="box-listen">
         {% for exercise in exercises %}
-            <div class="exercise-box" data-order="{{ exercise.position }}" data-correct="{{ exercise.correct_text }}">
+            <div class="exercise-box" data-order="{{ exercise.position }}" data-correct="{{ exercise.correct_text }}" data-exercise-id="{{exercise.id}}">
                 <h2>{{subtopic.title}} <span class="vocab-level">Vocab level: {{subtopic.level}}</span></h2>
                     <div class="navigation">
                         <button class="preBtn" {% if forloop.first %}disabled{% endif %}>←</button>

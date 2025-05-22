@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.hashers import make_password
 from django.core.paginator import Paginator
 from django.db.models import Prefetch
+from django.utils.timezone import now, timedelta
 
 # Create your views here.
 def home(request):
@@ -35,7 +36,9 @@ def login_view(request):
             login(request, user)
             user.log_audio_activity()
             messages.success(request, f"Welcome back, {user.nickname.title()}!")
-            return redirect('home')
+
+            next_url = request.GET.get('next','home')
+            return redirect(next_url)
         else:
             messages.error(request, "Invalid email or password.")
 
@@ -76,7 +79,7 @@ def topic_detail(request, topic_slug):
 
     # Gán subtopics đã lọc vào từng section
     for section in sections:
-        subs = section.subtopics.all()
+        subs = section.subtopics.all().order_by('id')
 
         should_filter = query or (level and level != 'all')
 
@@ -119,7 +122,7 @@ def changeNickname(request):
             user.nickname = new_nickname
             user.save()
             messages.success(request, "Nickname updated successfully.")
-            return redirect("user_profile")
+            return redirect("user_profile", user_id=user.id)
     else:
         form = ChangeNickName(initial={'nickname':user.nickname})
     return render(request, 'dolphin/admin_user/edit_nickname.html',{'form':form})
@@ -362,3 +365,34 @@ def delete_user(request, user_id):
         messages.success(request, "User deleted successfully!")
         return redirect('users')
     return render(request, 'dolphin/admin_user/delete_user.html', {'user': user})
+
+@login_required
+def user_profile(request,user_id):
+    user = get_object_or_404(User, id=user_id)
+    today = now().date()
+
+    lessons_completed = UserProgress.objects.filter(user=user, is_completed=True).count()
+
+    logs = UserProgress.objects.filter(user=user, updated_at__isnull=False)
+    active_7_days = logs.filter(updated_at__date__gte=today-timedelta(days=7)).values_list('updated_at',flat=True).distinct().count()
+    active_30_days = logs.filter(updated_at__date__gte=today-timedelta(days=30)).values_list('updated_at',flat=True).distinct().count()
+    active_7_hours = round(active_7_days * 1, 1)
+    active_30_hours = round(active_30_days * 1, 1)
+
+    return render(request, 'dolphin/admin_user/profile_public.html',{
+        'user':user,
+        'lessons_completed':lessons_completed,
+        'active_7_days':active_7_hours,
+        'active_30_days':active_30_hours
+    })
+
+def user_lesson_history(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+    completed = UserProgress.objects.filter(user=user, is_completed=True).select_related('subtopic')
+    in_progress = UserProgress.objects.filter(user=user, is_completed=False).select_related('subtopic')
+
+    return render(request, 'dolphin/admin_user/user_lesson_history.html', {
+        'user':user,
+        'completed':completed,
+        'in_progress':in_progress
+    })

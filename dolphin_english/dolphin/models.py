@@ -3,6 +3,8 @@ from django.utils.text import slugify
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.utils import timezone
 from datetime import date
+from django.core.files.base import ContentFile
+import requests
 class UserManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
         if not email:
@@ -27,10 +29,12 @@ class User(AbstractBaseUser, PermissionsMixin):
     join_date = models.DateField(auto_now_add=True)
     first_name = models.CharField(max_length=255, null=True, blank=True)
     last_name = models.CharField(max_length=255, null=True, blank=True)
+    image = models.ImageField(upload_to='avatars/', blank=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True)
     
     active_days = models.PositiveIntegerField(default=0)
-    active_seconds = models.PositiveIntegerField(default=0)
-    last_active_date = models.DateField(null=True, blank=True)
+    active_time = models.PositiveIntegerField(default=0)
+    last_active_date = models.DateTimeField(null=True, blank=True)
 
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
@@ -42,7 +46,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.nickname or self.email
-
+    
     @property
     def total_days(self):
         return (date.today() - self.join_date).days
@@ -132,6 +136,8 @@ class AudioExercise(models.Model):
     audioSrc = models.URLField()
     correct_text = models.TextField()
     position = models.PositiveIntegerField(default=1)
+    timeStart = models.FloatField(null=True, blank=True)
+    timeEnd = models.FloatField(null=True, blank=True)
 
     def __str__(self):
         return self.subtopic.title
