@@ -26,7 +26,6 @@
                     Hi, {{ request.user.nickname }}
                 </button>
                 <div class="dropdown-menu" id="userDropdown">
-                    <a href="{% url 'user_profile' user.id %}">Profile</a>
                     <a href="{% url 'user_account' %}">Account information</a>
                     <a href="{% url 'edit_pass' user.id %}">Change password</a>
                     <a href="{% url 'logout' %}">Logout</a>
