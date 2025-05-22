@@ -1,0 +1,105 @@
+/* Tổng thể */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f5f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tiêu đề */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 40px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Form Container */
+form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Các dòng field */
+form p {
+    margin-bottom: 25px;
+}
+
+/* Label */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 15px;
+}
+
+/* Input / Select / Textarea */
+form input,
+form select,
+form textarea {
+    width: 100%; /* Đảm bảo full chiều ngang */
+    box-sizing: border-box; /* 👈 để padding không làm vượt chiều rộng */
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    transition: border 0.3s, background-color 0.3s;
+    display: block;
+}
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Nút Submit */
+form button[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 14px rgba(0, 123, 255, 0.25);
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+/* Gợi ý lỗi (nếu có) */
+.errorlist {
+    list-style: none;
+    color: #dc3545;
+    padding: 0;
+    margin: 5px 0 10px 0;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    form {
+        padding: 25px;
+        margin: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}

@@ -1,9 +1,13 @@
 {% extends "dolphin/admin_user/admin_dashboard.html" %}
 {% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dolphin/css/admin_user/sections.css' %}">
+{% endblock %}
+
 
 {% block navbar %}
 <a href="{% url 'admin_dashboard' %}">Home</a>
-    <span>></span>
+    <span></span>
     <a href="{% url 'sections' %}">Sections</a>
 </div>
 {% endblock navbar %}

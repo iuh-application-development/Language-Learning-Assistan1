@@ -29,7 +29,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     last_name = models.CharField(max_length=255, null=True, blank=True)
     
     active_days = models.PositiveIntegerField(default=0)
-    active_seconds = models.PositiveIntegerField(default=0)
+    active_time = models.PositiveIntegerField(default=0)
     last_active_date = models.DateField(null=True, blank=True)
 
     is_active = models.BooleanField(default=True)

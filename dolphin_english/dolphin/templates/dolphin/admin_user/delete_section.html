@@ -1,5 +1,9 @@
 {% extends "dolphin/admin_user/admin_dashboard.html" %}
+{% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dolphin/css/admin_user/delete.css' %}">
+{% endblock %}
 {% block topics %}
     <h2>Delete Section</h2>
     <p>Are you sure you want to delete the section "{{ section.title }}"?</p>
