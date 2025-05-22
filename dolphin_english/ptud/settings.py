@@ -12,7 +12,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-5lalhmb2x3qltg#2b#33%n34&lzb7w4)i4go)w!ri@2)t9!3t8"
+SECRET_KEY = os.environ.get('SECRET_KEY', 'default-key-for-dev')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = []
 
@@ -118,11 +120,11 @@ WSGI_APPLICATION = "ptud.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',  # Tên database (cố định là postgres trên Supabase)
-        'USER': 'postgres.xsutpoaldoomzirjkvzj',  # Tên user mặc định trên Supabase
-        'PASSWORD': 'tbReKoiyjQmIVmnx',  # Mật khẩu từ connection string
-        'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',  # Lấy từ Supabase connection string
-        'PORT': '6543',  # Cổng mặc định cho PostgreSQL
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT'),
     }
 }
 # postgresql://postgres:[dolphin123456@@]@db.suuncnrzpfgpqudxdmmr.supabase.co:5432/postgres
