@@ -218,11 +218,12 @@ def create_topic(request):
         form = TopicForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, "Topic created successfully!")
+            messages.success(request, "Topic created successfully!",extra_tags='admin')
             return redirect('topics')
     else:
         form = TopicForm()
     return render(request, 'dolphin/admin_user/create_topic.html', {'form':form})
+
 
 @user_passes_test(is_admin)
 def create_section(request):

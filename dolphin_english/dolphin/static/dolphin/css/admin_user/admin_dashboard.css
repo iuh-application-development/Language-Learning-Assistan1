@@ -1,0 +1,136 @@
+/* Tổng thể */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 25px 40px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logout */
+a[href*="logout"] {
+    display: block;
+    text-align: right;
+    padding: 12px 40px 0 0;
+    font-weight: 500;
+    color: #dc3545;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+a[href*="logout"]:hover {
+    color: #a71d2a;
+    text-decoration: underline;
+}
+
+/* Dashboard container */
+.dashboard-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Navbar */
+.navbar {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.navbar span {
+    color: #888;
+    margin-right: 10px;
+}
+
+/* Table */
+.dashboard-container h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.dashboard-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dashboard-container th,
+.dashboard-container td {
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dashboard-container tr:hover {
+    background-color: #f8f9ff;
+}
+
+.dashboard-container td a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.dashboard-container td a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+.main-content {
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    header {
+        font-size: 22px;
+        padding: 20px;
+    }
+
+    .dashboard-container,
+    .main-content {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .dashboard-container table,
+    .dashboard-container td,
+    .dashboard-container th {
+        font-size: 14px;
+    }
+
+    a[href*="logout"] {
+        padding: 10px 20px 0 0;
+    }
+}

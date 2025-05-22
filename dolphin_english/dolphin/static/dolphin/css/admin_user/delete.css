@@ -1,56 +1,93 @@
-/* admin_user_delete.css */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
 
-.delete-user-container {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+/* Wrapper cho toàn bộ nội dung */
+.delete-wrapper {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 40px;
     background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
     text-align: center;
-    font-family: 'Segoe UI', sans-serif;
 }
 
-.delete-user-container h2 {
-    color: #d9534f; /* đỏ cảnh báo */
-    margin-bottom: 20px;
+/* Tiêu đề */
+.delete-wrapper h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #dc3545;
+    margin-bottom: 15px;
 }
 
-.delete-user-container p {
+/* Câu hỏi xác nhận */
+.delete-wrapper p {
     font-size: 16px;
+    color: #555;
     margin-bottom: 30px;
 }
 
-.delete-user-container form {
-    display: inline-block;
-    margin-right: 15px;
+/* Form và nút xoá */
+.delete-wrapper form {
+    margin-bottom: 20px;
 }
 
-.delete-user-container button {
-    background-color: #d9534f;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+.delete-wrapper form button[type="submit"] {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 12px 24px;
     font-size: 15px;
-    border-radius: 5px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 14px rgba(220, 53, 69, 0.2);
 }
 
-.delete-user-container button:hover {
-    background-color: #c9302c;
+.delete-wrapper form button[type="submit"]:hover {
+    background-color: #b02a37;
+    transform: translateY(-1px);
 }
 
-.delete-user-container a {
+/* Link Cancel */
+.delete-wrapper a.cancel-link {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #5bc0de;
-    color: white;
+    margin-top: 10px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    color: #007bff;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s ease;
 }
 
-.delete-user-container a:hover {
-    background-color: #31b0d5;
+.delete-wrapper a.cancel-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .delete-wrapper {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .delete-wrapper h2 {
+        font-size: 22px;
+    }
+
+    .delete-wrapper p {
+        font-size: 14px;
+    }
+
+    .delete-wrapper form button,
+    .delete-wrapper a.cancel-link {
+        width: 100%;
+    }
 }
