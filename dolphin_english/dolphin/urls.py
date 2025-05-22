@@ -15,10 +15,12 @@ urlpatterns = [
     # Listen and Type
     path('listen/<slug:topic_slug>/<slug:subtopic_slug>/listen-and-type/',views.listen_and_type, name='listen_and_type'),
     # User & Admin Dashboard
-    path('user/profile/',views.account_information, name='user_profile'),
+    path('user/profile/<int:user_id>/',views.user_profile, name='user_profile'),
+    path('user/account/',views.account_information, name='user_account'),
     path('edit-nickname/', views.changeNickname, name='edit_nickname'),
     path('edit-email/', views.changeEmail, name='edit_email'),
     path('edit-password/<int:user_id>', views.changePassword, name='edit_pass'),
+    path('user/<int:user_id>/lessons/',views.user_lesson_history, name='user_lesson_history'),
 
     # Admin
     path('admin-dashboard/', views.admin_dashboard, name='admin_dashboard'),

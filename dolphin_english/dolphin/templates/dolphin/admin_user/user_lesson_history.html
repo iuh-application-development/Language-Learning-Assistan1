@@ -1,0 +1,31 @@
+{% extends "dolphin/base.html" %} 
+{% load static %} 
+{% block content %} 
+
+{% block extra_css %} 
+{% endblock extra_css %}
+<h2>Lessons for {{ user.nickname }}</h2>
+
+<h3>✅ Completed Subtopics</h3>
+<ul>
+    {% for progress in completed %}
+    <li>
+        {{ progress.subtopic.title }} (Last updated: {{ progress.updated_at|date:"d M Y" }})
+    </li>
+    {% empty %}
+    <li>No completed lessons yet.</li>
+    {% endfor %}
+</ul>
+
+<h3>🕒 In Progress</h3>
+<ul>
+    {% for progress in in_progress %}
+    <li>
+        {{ progress.subtopic.title }} (Current position: {{ progress.exercise_position }})
+    </li>
+    {% empty %}
+    <li>No lessons in progress.</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
