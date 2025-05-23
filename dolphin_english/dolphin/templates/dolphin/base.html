@@ -43,13 +43,14 @@
             {% if messages %}
                 <div class="messages">
                     {% for message in messages %}
-                        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-default{% endif %}">
-                            {{ message }}
-                        </div>
+                         {% if 'user' in message.tags and not request.user.is_staff %}
+                            <div class="alert alert-{{ message.tags }}">
+                                {{ message }}
+                            </div>
+                        {% endif %}
                     {% endfor %}
                 </div>
             {% endif %}
-
             {% block content %}
                 {% block backToTop %}   
                 {% endblock backToTop %}
