@@ -1,14 +1,18 @@
 {% extends "dolphin/admin_user/admin_dashboard.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dolphin/css/admin_user/users.css' %}">
+{% endblock %}
 
-{% block navbar%}
+{% block navbar %}
 <div class="navbar">
     <a href="{% url 'admin_dashboard' %}">Home</a>
     <span>></span>
     <a href="{% url 'users' %}">Users</a>
 </div>
-{% endblock navbar%}
+{% endblock %}
+
 {% block topics %}
 <div class="list_user">
     <table>
@@ -21,7 +25,6 @@
                 <th>LAST LOGIN</th>
                 <th>IS ACTIVE</th>
                 <th>IS STAFF</th>
-                
             </tr>
         </thead>
         <tbody>
@@ -39,4 +42,4 @@
         </tbody>
     </table>
 </div>
-{% endblock topics %}
+{% endblock %}

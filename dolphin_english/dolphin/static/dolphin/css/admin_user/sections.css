@@ -1,0 +1,128 @@
+/* Tổng thể */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    padding: 15px 25px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.navbar span {
+    margin-right: 10px;
+    color: #888;
+}
+
+/* Bảng Sections */
+.list_sections {
+    margin: 30px auto;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+}
+
+.list_sections table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 15px;
+}
+
+.list_sections thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.list_sections th,
+.list_sections td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333;
+}
+
+.list_sections td a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.list_sections tr:hover {
+    background-color: #f1f5ff;
+}
+
+.list_sections tr:hover td {
+    color: #000;
+}
+
+.list_sections tr:hover td a {
+    color: #0056b3;
+}
+
+/* Định dạng cột */
+.list_sections th:nth-child(1),
+.list_sections td:nth-child(1) {
+    width: 10%;
+}
+
+.list_sections th:nth-child(2),
+.list_sections td:nth-child(2) {
+    width: 40%;
+}
+
+.list_sections th:nth-child(3),
+.list_sections td:nth-child(3) {
+    width: 20%;
+}
+
+.list_sections th:nth-child(4),
+.list_sections td:nth-child(4) {
+    width: 30%;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .list_sections table,
+    .list_sections thead,
+    .list_sections tbody,
+    .list_sections th,
+    .list_sections td,
+    .list_sections tr {
+        display: block;
+    }
+
+    .list_sections th {
+        background-color: transparent;
+        color: #444;
+        font-weight: bold;
+        padding-top: 20px;
+    }
+
+    .list_sections td {
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .list_sections td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        color: #555;
+    }
+}

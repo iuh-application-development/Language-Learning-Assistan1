@@ -1,10 +1,13 @@
 {% extends "dolphin/admin_user/admin_dashboard.html" %}
 {% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dolphin/css/admin_user/audios.css' %}">
+{% endblock %}
 
 {% block navbar %}
 <div class="navbar">
     <a href="{% url 'admin_dashboard' %}">Home</a>
-    <span>></span>
+    <span></span>
     <a href="{% url 'audios' %}">Audio</a>
 </div>
 {% endblock navbar %}

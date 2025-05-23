@@ -1,4 +1,9 @@
 {% extends "dolphin/admin_user/admin_dashboard.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dolphin/css/admin_user/create_audio_exercise.css' %}">
+{% endblock %}
 
 {% block topics %}
     <h2>Create Audio Exercise</h2>
