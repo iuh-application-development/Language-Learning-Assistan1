@@ -98,14 +98,23 @@ def topic_detail(request, topic_slug):
 
 def listen_and_type(request, topic_slug, subtopic_slug):
     topic = get_object_or_404(Topic, slug=topic_slug)
-    subtopic = get_object_or_404(SubTopic, slug=subtopic_slug)
-    exercises = AudioExercise.objects.filter(subtopic=subtopic).order_by('id','position')
+    current_subtopic = get_object_or_404(SubTopic, slug=subtopic_slug, topic=topic)
+    exercises = AudioExercise.objects.filter(subtopic=current_subtopic).order_by('position')
 
-    return render(request, 'dolphin/listen/listen_and_type.html', {
+    # Dùng ID để xác định previous và next subtopic
+    previous_subtopic = SubTopic.objects.filter(topic=topic, id__lt=current_subtopic.id).order_by('-id').first()
+    next_subtopic = SubTopic.objects.filter(topic=topic, id__gt=current_subtopic.id).order_by('id').first()
+
+    context = {
         "topic": topic,
-        "subtopic": subtopic,
-        "exercises": exercises
-    })   
+        "subtopic": current_subtopic,
+        "exercises": exercises,
+        "previous_subtopic": previous_subtopic,
+        "next_subtopic": next_subtopic,
+        "is_first_subtopic": previous_subtopic is None,
+        "is_last_subtopic": next_subtopic is None,
+    }   
+    return render(request, 'dolphin/listen/listen_and_type.html', context)
 # User
 @login_required
 def account_information(request):
@@ -125,7 +134,7 @@ def changeNickname(request):
                 user.nickname = new_nickname
                 user.save()
                 messages.success(request, "Nickname updated successfully.")
-                return redirect("user_profile", user_id=user.id)
+                return redirect("user_account")
     else:
         form = ChangeNickName(initial={'nickname': user.nickname})
     return render(request, 'dolphin/admin_user/edit_nickname.html', {'form': form})
@@ -143,7 +152,7 @@ def changeEmail(request):
                 user.email = new_email
                 user.save()
                 messages.success(request, "Email updated successfully.")
-                return redirect("user_profile")
+                return redirect("user_account")
     else:
         form = ChangeEmail(initial={'email': user.email})
     return render(request, 'dolphin/admin_user/edit_email.html', {'form': form})
@@ -160,7 +169,7 @@ def changePassword(request, user_id):
             user.save()
             update_session_auth_hash(request, user)
             messages.success(request, "Your password was successfully updated!")
-            return redirect('user_profile')
+            return redirect('user_account')
     else:
         form = ChangePasswordForm()
     return render(request, 'dolphin/admin_user/change_password.html',{'form':form})
@@ -373,26 +382,6 @@ def delete_user(request, user_id):
         messages.success(request, "User deleted successfully!")
         return redirect('users')
     return render(request, 'dolphin/admin_user/delete_user.html', {'user': user})
-
-@login_required
-def user_profile(request,user_id):
-    user = get_object_or_404(User, id=user_id)
-    today = now().date()
-
-    lessons_completed = UserProgress.objects.filter(user=user, is_completed=True).count()
-
-    logs = UserProgress.objects.filter(user=user, updated_at__isnull=False)
-    active_7_days = logs.filter(updated_at__date__gte=today-timedelta(days=7)).values_list('updated_at',flat=True).distinct().count()
-    active_30_days = logs.filter(updated_at__date__gte=today-timedelta(days=30)).values_list('updated_at',flat=True).distinct().count()
-    active_7_hours = round(active_7_days * 1, 1)
-    active_30_hours = round(active_30_days * 1, 1)
-
-    return render(request, 'dolphin/admin_user/profile_public.html',{
-        'user':user,
-        'lessons_completed':lessons_completed,
-        'active_7_days':active_7_hours,
-        'active_30_days':active_30_hours
-    })
 
 def user_lesson_history(request, user_id):
     user = get_object_or_404(User, id=user_id)
