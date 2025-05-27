@@ -17,31 +17,67 @@
     </div>
     <div class="content-wrapper">
         <div class="box-listen">
-        {% for exercise in exercises %}
-            <div class="exercise-box" data-order="{{ exercise.position }}" data-correct="{{ exercise.correct_text }}" data-exercise-id="{{exercise.id}}">
-                <h2>{{subtopic.title}} <span class="vocab-level">Vocab level: {{subtopic.level}}</span></h2>
-                    <div class="navigation">
-                        <button class="preBtn" {% if forloop.first %}disabled{% endif %}>←</button>
-                        <span class="exercise-count">{{exercise.position}} / {{exercises | length}}</span>
-                        <button class="nextBtn"{% if forloop.last %}disabled{% endif %}>→</button>
-                    </div>
-                    <audio controls class="playerAudio">
-                        <source src="{{ exercise.audioSrc }}" type="audio/mpeg">
-                        Your browser does not support the audio tag.
-                    </audio>
-                    <textarea class="userInput" placeholder="Type what you hear..." autocomplete="off" autocorrect="off" spellcheck="false"></textarea>
-                    <div class="feedback"></div>
+            {% for exercise in exercises %}
+                <div class="exercise-box" data-order="{{ exercise.position }}" data-correct="{{ exercise.correct_text }}" data-exercise-id="{{exercise.id}}">
+                    <h2>{{subtopic.title}} <span class="vocab-level">Vocab level: {{subtopic.level}}</span></h2>
+                        <div class="navigation">
+                            <button class="preBtn" {% if forloop.first %}disabled{% endif %}>←</button>
+                            <span class="exercise-count">{{exercise.position}} / {{exercises | length}}</span>
+                            <button class="nextBtn"{% if forloop.last %}disabled{% endif %}>→</button>
+                        </div>
+                        <audio controls class="playerAudio">
+                            <source src="{{ exercise.audioSrc }}" type="audio/mpeg">
+                            Your browser does not support the audio tag.
+                        </audio>
+                        <textarea class="userInput" placeholder="Type what you hear..." autocomplete="off" autocorrect="off" spellcheck="false"></textarea>
+                        <div class="feedback"></div>
 
-                    <div class="exercise-buttons">
-                        <button class="checkBtn">Check</button>
-                        <button class="skipBtn">Skip</button>
-                        
-                        <button class="nextBtnHidden" style="display: none;">Next</button>
-                        <button class="replayBtn" style="display: none;">Replay</button>
-                    </div>
-            </div>
-        {% endfor %}
+                        <div class="exercise-buttons">
+                            <button class="checkBtn">Check</button>
+                            <button class="skipBtn">Skip</button>
+                            
+                            <button class="nextBtnHidden" style="display: none;">Next</button>
+                            <button class="replayBtn" style="display: none;">Replay</button>
+                        </div>
+                </div>
+            {% endfor %}
         </div>
+        <div id="completion-dialog" style="display: none; text-align: center; padding: 30px; border: 1px solid #ccc; border-radius: 12px; margin-top: 40px; background: #f9f9f9;">
+            <h2>You have completed this exercise,<br><strong>good job!</strong></h2>
+            <div style="margin: 20px 0;">
+                <div style="display: inline-block; background: #22c55e; color: white; border-radius: 50%; width: 60px; height: 60px; line-height: 60px; font-size: 30px;">
+                    ✓
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+
+                {% if previous_subtopic %}
+                <a href="{% url 'listen_and_type' topic.slug previous_subtopic.slug %}" class="btn"
+                style="padding: 10px 20px; background-color: #6b7280; color: white; border: none; border-radius: 8px; text-decoration: none;">
+                ← Previous Exercise
+                </a>
+                {% endif %}
+
+                {% if next_subtopic %}
+                <a href="{% url 'listen_and_type' topic.slug next_subtopic.slug %}" class="btn"
+                style="padding: 10px 20px; background-color: #2563eb; color: white; border: none; border-radius: 8px; text-decoration: none;">
+                Next Exercise →
+                </a>
+                {% endif %}
+
+                <button onclick="window.location.reload()"
+                        style="padding: 10px 20px; border: 1px solid #ccc; border-radius: 8px; background: white; cursor: pointer;">
+                    Repeat this exercise
+                </button>
+            </div>
+
+            <!-- Link xem tất cả -->
+            <div style="margin-top: 10px;">
+                <a href="{% url 'listen' %}" style="font-size: 14px; color: #2563eb;">View all exercises</a>
+            </div>
+        </div>
+
         <div class="dropdown">
             <button class="dropdown-btn">
                 Full Audio & Transcript

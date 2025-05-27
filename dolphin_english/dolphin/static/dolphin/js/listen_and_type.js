@@ -118,6 +118,10 @@ document.addEventListener("DOMContentLoaded", function () {
             if (currentExerciseIndex < totalExercises - 1) {
                 currentExerciseIndex++;
                 updateExerciseDisplay();
+            } else {
+                // ✅ Nếu là bài cuối → hiện navigation box chuyển subtopic
+                const navBox = document.getElementById("navigation-box");
+                if (navBox) navBox.style.display = "flex";
             }
         }
         if (event.target.classList.contains("replayBtn")) {
@@ -169,7 +173,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 let skipBtn = currentExercise.querySelector(".skipBtn");
                 checkBtn.style.display = "none";
                 skipBtn.style.display = "none";
-    
+                if (currentExerciseIndex === totalExercises - 1) {
+                    const completionBox = document.getElementById("completion-dialog");
+                    if (completionBox) {
+                        completionBox.style.display = "block";
+                        completionBox.scrollIntoView({ behavior: "smooth" });
+                    }
+                }
             } else {
                 let feedback = checkSpelling(userAnswer, correctAnswer);
                 feedbackElement.innerHTML = "<span style='font-size: 20px;'>❌ Incorrect </span><br><span>" + feedback + "</span>";

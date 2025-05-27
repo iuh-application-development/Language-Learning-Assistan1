@@ -201,7 +201,7 @@
 /* ===========================
    CSS cho Google
    =========================== */
-   .google-btn-container {
+.google-btn-container {
     text-align: center;
     margin-top: 20px;
 }
@@ -212,16 +212,16 @@
     background-color: white;
     color: black;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: bold;
     text-decoration: none;
     transition: background 0.3s;
-    border-color: black;
-    border-style: solid;
+    border: 1px solid black;
 }
 
 .google-btn:hover {
     background-color: #c23321;
+    color: white;
 }
 
 .google-icon {

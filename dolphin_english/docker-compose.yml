@@ -1,0 +1,16 @@
+services:
+  ptud-english-lla:
+    build: .
+    container_name: english-lla
+    ports:
+      - "8000:8000"
+    environment:
+      DJANGO_SECRET_KEY: ${SECRET_KEY}
+      DATABASE_NAME: ${DB_NAME}
+      DATABASE_USER: ${DB_USER}
+      DATABASE_PASSWORD: ${DB_PASSWORD}
+      DATABASE_HOST: ${DB_HOST}
+      DATABASE_PORT: ${DB_PORT}
+
+    env_file:
+      - .env
