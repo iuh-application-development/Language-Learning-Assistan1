@@ -3,15 +3,8 @@ from .models import User, Topic, Section, SubTopic, AudioExercise
 from django import forms
 from allauth.account.forms import SignupForm
 
-class CustomSignupForm(SignupForm):
-    nickname = forms.CharField(max_length=255)
 
-    def save(self, request):
-        user = super().save(request)
-        user.nickname = self.cleaned_data['nickname']
-        user.save()
-        return user
-    
+# kiểm tra dữ liệu từ form gửi lên
 class CustomeUserCreationForm(UserCreationForm):
     nickname = forms.CharField(label='Nickname', widget=forms.TextInput(attrs={'placeholder':"Nickname"}))
     email = forms.EmailField(widget=forms.EmailInput(attrs={'placeholder':"Email"}))
