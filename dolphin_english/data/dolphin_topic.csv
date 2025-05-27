@@ -1,0 +1,9 @@
+id,name,slug,image,lessons,levels
+1,Short Stories,short-stories,image/short-stories.jpg,289,A1-C1
+2,Conversations,conversations,image/conversations.jpg,100,A1-B1
+3,TOEIC Listening,toeic,image/toeic.jpg,600,A2-C1
+4,IELTS Listening,ielts,image/ielts.jpg,328,B1-C2
+5,TOEFL Listening,toefl,image/toefl.jpg,54,B1-C2
+6,Numbers,numbers,image/numbers.jpg,9,A1
+7,Spelling Names,spelling-names,image/spelling-names.jpg,6,A1
+8,IPA,ipa,image/ipa.jpg,42,A1
