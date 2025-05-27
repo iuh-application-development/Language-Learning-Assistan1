@@ -49,10 +49,10 @@ def register_view(request):
     if request.method == 'POST':
         forms = CustomeUserCreationForm(request.POST)
         if forms.is_valid():
-            user = forms.save()
+            user = forms.save() # tạo user mới
             user.backend = 'django.contrib.auth.backends.ModelBackend'
-            login(request, user) 
-            user.log_audio_activity()
+            login(request, user)   # tự động đăng nhập
+            user.log_audio_activity()# ghi nhận hoạt động
 
             return redirect('home')
         else:
