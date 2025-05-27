@@ -33,6 +33,9 @@ ALLOWED_HOSTS = ['sharp-fit-mullet.ngrok-free.app', '127.0.0.1','localhost']
 
 SITE_ID = 5
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://sharp-fit-mullet.ngrok-free.app",
+]
 
 # Application definition
 
