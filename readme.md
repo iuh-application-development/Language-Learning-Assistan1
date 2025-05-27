@@ -16,7 +16,8 @@ The platform offers a user-friendly learning experience, suitable for both begin
 3. [Technologies Used](#3-technologies-used)  
 4. [Database](#4-database)  
 5. [Usage Guide](#5-usage-guide)
-6. [Contact](#5-contact)  
+6. [Slide](#6-slide)
+7. [Contact](#7-contact)  
 ---
 
 ## 1. Installation
@@ -124,7 +125,11 @@ Here is the system’s database schema:
 ## 5. Usage Guide
 [![Watch the video](https://img.youtube.com/vi/nJDhji87haY/hqdefault.jpg)](https://youtu.be/nJDhji87haY)
 
-## 6. Contact
+---
+## 6. Slide
+👉 [Watch Slide in Canva](https://www.canva.com/design/DAGonJZfLvE/ct53exW_nzioMCYbJMWvJQ/edit?utm_content=DAGonJZfLvE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+## 7. Contact
 
 **Development Team:**
 
