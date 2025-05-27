@@ -155,5 +155,16 @@ class UserProgress(models.Model):
 
     def __str__(self):
         return f'{self.subtopic.title}'
-    
+
+class ListenedAudio(models.Model):
+    progress = models.ForeignKey(UserProgress, on_delete=models.CASCADE, related_name='listened_audios')
+    audio = models.ForeignKey(AudioExercise, on_delete=models.CASCADE)
+    listened_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('progress', 'audio')
+
+    def __str__(self):
+        return f"{self.progress.user.email} listened to {self.audio} in {self.progress.subtopic}"
+
     
