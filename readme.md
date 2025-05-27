@@ -15,11 +15,11 @@ The platform offers a user-friendly learning experience, suitable for both begin
    - [Register](#register)  
 3. [Technologies Used](#3-technologies-used)  
 4. [Database](#4-database)  
-5. [Contact](#5-contact)  
-
+5. [Usage Guide](#5-usage-guide)
+6. [Contact](#5-contact)  
 ---
 
-## 1. 🚀 Installation
+## 1. Installation
 
 ### Environment Requirements:
 - Python >= 3.8  
@@ -44,7 +44,7 @@ python manage.py runserver  # you can change the port if needed
 
 ---
 
-## 2. 🧠 Features
+## 2. Features
 
 ### 🎧 Listening  
 ![alt text](dolphin_english/media/image/img_readme/image.png)
@@ -66,7 +66,7 @@ python manage.py runserver  # you can change the port if needed
 
 ---
 
-## 3. ⚙️ Technologies Used
+## 3. Technologies Used
 
 ### Backend & Database:
 - **Django**: Main web framework  
@@ -79,13 +79,13 @@ python manage.py runserver  # you can change the port if needed
 
 ---
 
-## 4. 🗄️ Database
+## 4. Database
 
 The system uses a relational database model, designed to fully support English learning features such as listening exercises, grammar lessons, progress tracking, and user management.
 
 Here is the system’s database schema:
 
-![alt text](dolphin_english/media/image/img_readme/db.png) 
+![alt text](dolphin_english/media/image/img_readme/db.jpg) 
 
 ### 📘 Main Tables Description:
 
@@ -117,12 +117,14 @@ Here is the system’s database schema:
 
 ### 🎥 Database Structure & Diagram
 
-![DB](dolphin_english/media/image/img_readme/db.gif)
+[![Watch the video](https://img.youtube.com/vi/nJDhji87haY/hqdefault.jpg)](https://youtu.be/nJDhji87haY)
 
 
 ---
+## 5. Usage Guide
+[![Watch the video](https://img.youtube.com/vi/nJDhji87haY/hqdefault.jpg)](https://youtu.be/nJDhji87haY)
 
-## 5. 📬 Contact
+## 6. Contact
 
 **Development Team:**
 
